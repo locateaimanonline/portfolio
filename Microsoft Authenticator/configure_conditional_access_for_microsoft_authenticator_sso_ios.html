@@ -1,0 +1,339 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="description" content="Integrate Microsoft Access Management to enforce sign-in policies and validate Single Sign-On (SSO) compliance through your Microsoft Entra ID tenant."/><meta name="DC.relation" content="../Microsoft%20Authenticator/microsoft_authenticator_sso_for_ios_devices.html"/><meta name="DC.relation" content="../new_feature_documentation.html"/><meta name="DC.relation" content="microsoft_authenticator_sso_for_ios_devices.html"/><meta name="DC.creator" content="Aiman Nabeel"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="task_f4t_hf5_t2c"/>        
+      <title>Configure Microsoft Access Management for Microsoft Authenticator SSO (iOS/iPadOS)</title><!--  Generated with Oxygen version 26.0, build number 2024012323.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="task_f4t_hf5_t2c-d628e224"/><meta name="wh-source-relpath" content="Microsoft%20Authenticator/configure_conditional_access_for_microsoft_authenticator_sso_ios.dita"/><meta name="wh-out-relpath" content="Microsoft Authenticator/configure_conditional_access_for_microsoft_authenticator_sso_ios.html"/>
+
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/commons.css?buildId=2024012323"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2024012323"/>
+
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260129185623"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2024012323"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260129185623"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2024012323"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2024012323"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-gray.css?buildId=2024012323"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=2024012323"/></head>
+
+    <body id="task_f4t_hf5_t2c" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Improvement Work</span>  </span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_jjw_bqv_b3c-d628e165-mi" data-tocid="concept_jjw_bqv_b3c-d628e165" data-state="not-ready" class=" topicref " data-id="concept_jjw_bqv_b3c"><span class="title"><a href="../new_feature_documentation.html">Documented New Features</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_tj1_ypv_b3c-d628e505-mi" data-tocid="concept_tj1_ypv_b3c-d628e505" data-state="not-ready" class=" topicref " data-id="concept_tj1_ypv_b3c"><span class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="concept_jjw_bqv_b3c"><div class="title"><a href="../new_feature_documentation.html">Documented New Features</a></div></div></li><li><div class="topicref" data-id="task_o3r_tqm_k2c"><div class="title"><a href="../Microsoft%20Authenticator/microsoft_authenticator_sso_for_ios_devices.html">Configuring Microsoft Authenticator Single Sign-On (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Set up Microsoft Authenticator SSO on iOS or iPadOS devices to streamline sign-in         across Microsoft Authentication Library (MSAL) apps, such as Microsoft Teams or         Outlook.</p></div></div></div></li><li class="active"><div class="topicref" data-id="task_f4t_hf5_t2c"><div class="title"><a href="../Microsoft%20Authenticator/configure_conditional_access_for_microsoft_authenticator_sso_ios.html">Configure Microsoft Access Management for Microsoft Authenticator SSO (iOS/iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Integrate Microsoft Access Management to enforce sign-in policies and validate Single         Sign-On (SSO) compliance through your Microsoft Entra ID tenant.</p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="concept_jjw_bqv_b3c-d628e165" class="topicref" data-id="concept_jjw_bqv_b3c" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_jjw_bqv_b3c-d628e165-link" class="wh-expand-btn"></span><div class="title"><a href="../new_feature_documentation.html" id="concept_jjw_bqv_b3c-d628e165-link">Documented New Features</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="task_o3r_tqm_k2c-d628e175" class="topicref" data-id="task_o3r_tqm_k2c" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action task_o3r_tqm_k2c-d628e175-link" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/microsoft_authenticator_sso_for_ios_devices.html" id="task_o3r_tqm_k2c-d628e175-link">Configuring Microsoft Authenticator Single Sign-On (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Set up Microsoft Authenticator SSO on iOS or iPadOS devices to streamline sign-in         across Microsoft Authentication Library (MSAL) apps, such as Microsoft Teams or         Outlook.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="assigning_user_licenses_in_entra_id_azure_ad-d628e188" class="topicref" data-id="assigning_user_licenses_in_entra_id_azure_ad" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/assigning_user_licenses_in_entra_id_azure_ad.html" id="assigning_user_licenses_in_entra_id_azure_ad-d628e188-link">Assign User Licenses in Microsoft Entra ID/Azure AD</a></div></div></li><li role="treeitem"><div data-tocid="task_lnn_wk5_t2c-d628e198" class="topicref" data-id="task_lnn_wk5_t2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/adding_a_microsoft_authenticator_sso_payload_ios_ipados.html" id="task_lnn_wk5_t2c-d628e198-link">Add a Microsoft Authenticator SSO Payload (iOS/iPadOS)</a></div></div></li><li role="treeitem"><div data-tocid="task_o3r_tqm_k2c-d628e208" class="topicref" data-id="task_o3r_tqm_k2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/configuring_the_microsoft_entra_id_connection.html" id="task_o3r_tqm_k2c-d628e208-link">Connect Microsoft Entra ID for Microsoft Authenticator SSO (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Set up a trusted connection between <span class="keyword">SOTI MobiControl</span> and Microsoft         Entra ID to support device registration and Single Sign-On (SSO) for Microsoft         apps.</p></div></div></div></li><li role="treeitem" class="active"><div data-tocid="task_f4t_hf5_t2c-d628e224" class="topicref" data-id="task_f4t_hf5_t2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/configure_conditional_access_for_microsoft_authenticator_sso_ios.html" id="task_f4t_hf5_t2c-d628e224-link">Configure Microsoft Access Management for Microsoft Authenticator SSO (iOS/iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Integrate Microsoft Access Management to enforce sign-in policies and validate Single         Sign-On (SSO) compliance through your Microsoft Entra ID tenant.</p></div></div></div></li><li role="treeitem"><div data-tocid="task_pnx_mr5_t2c-d628e237" class="topicref" data-id="task_pnx_mr5_t2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/define_extensbile_sso_for_microsoft_authenticator_sso_ios_ipados.html" id="task_pnx_mr5_t2c-d628e237-link">Define Extensible SSO for Microsoft Authenticator SSO (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Add Microsoft URL prefixes to the Extensible Single Sign-On (SSO) configuration so         the Microsoft Authenticator app can detect and process authentication requests for supported         Microsoft services.</p></div></div></div></li><li role="treeitem"><div data-tocid="task_egm_2w5_t2c-d628e250" class="topicref" data-id="task_egm_2w5_t2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/deploying_the_microsoft_authenticator_sso_configuration_ios_ipados.html" id="task_egm_2w5_t2c-d628e250-link">Deploy the Microsoft Authenticator SSO Payload and Application (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Deploy the Microsoft Authenticator SSO payload and required apps to enable seamless         sign-in on iOS/iPadOS devices.</p></div></div></div></li><li role="treeitem"><div data-tocid="task_fcz_52b_l2c-d628e263" class="topicref" data-id="task_fcz_52b_l2c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/using_the_microsoft_sso_configuration.html" id="task_fcz_52b_l2c-d628e263-link">Register Devices for Microsoft Authenticator SSO (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Register iOS/ iPadOS devices with Microsoft Entra ID to enable automatic sign-in to         Microsoft Authentication Library (MSAL) apps using Microsoft Authenticator Single Sign-On         (SSO).</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_m4v_hzj_fdc-d628e276" class="topicref" data-id="concept_m4v_hzj_fdc" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_m4v_hzj_fdc-d628e276-link" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/using_soti_vpn_servers_dita.html" id="concept_m4v_hzj_fdc-d628e276-link">Using SOTI VPN</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="lockdown_wizard_overview-d628e383" class="topicref" data-id="lockdown_wizard_overview" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action lockdown_wizard_overview-d628e383-link" class="wh-expand-btn"></span><div class="title"><a href="../Lockdown/lockdown_wizard.html" id="lockdown_wizard_overview-d628e383-link">The Lockdown Wizard | Overview</a></div></div></li></ul></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="ariaid-title1">
+    
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Configure Microsoft Access Management for Microsoft Authenticator SSO
+        (iOS/iPadOS)</h1>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Integrate Microsoft Access Management to enforce sign-in policies and validate Single
+        Sign-On (SSO) compliance through your Microsoft Entra ID tenant.</p>
+        <section class="- topic/section task/prereq section prereq" id="task_f4t_hf5_t2c__prereq_gzb_55d_t2c" data-ofbid="task_f4t_hf5_t2c__prereq_gzb_55d_t2c">Ensure the following steps have been completed:<ol class="- topic/ol ol" id="task_f4t_hf5_t2c__ol_vxh_jw5_t2c" data-ofbid="task_f4t_hf5_t2c__ol_vxh_jw5_t2c">
+            <li class="- topic/li li"><a class="- topic/xref xref" href="assigning_user_licenses_in_entra_id_azure_ad.html">Assign User Licenses in Microsoft Entra ID/Azure AD</a></li>
+                <li class="- topic/li li"><a class="- topic/xref xref" href="adding_a_microsoft_authenticator_sso_payload_ios_ipados.html">Add a Microsoft Authenticator SSO Payload (iOS/iPadOS)</a></li>
+            <li class="- topic/li li"><a class="- topic/xref xref" href="configuring_the_microsoft_entra_id_connection.html" title="Set up a trusted connection between SOTI MobiControl and Microsoft Entra ID to support device registration and Single Sign-On (SSO) for Microsoft apps.">Connect Microsoft Entra ID for Microsoft Authenticator SSO (iOS/ iPadOS)</a></li>
+        </ol></section>
+        <section class="- topic/section task/context section context" id="task_f4t_hf5_t2c__context_szr_t5d_t2c" data-ofbid="task_f4t_hf5_t2c__context_szr_t5d_t2c">This is the fourth step in configuring Microsoft
+            Authenticator SSO for iOS/ iPadOS devices. See <a class="- topic/xref xref" href="microsoft_authenticator_sso_for_ios_devices.html" title="Set up Microsoft Authenticator SSO on iOS or iPadOS devices to streamline sign-in across Microsoft Authentication Library (MSAL) apps, such as Microsoft Teams or Outlook.">Configuring Microsoft Authenticator Single Sign-On (iOS/ iPadOS)</a>. In this step, you
+            integrate Microsoft Access Management with <span class="- topic/keyword keyword">SOTI MobiControl</span>. This
+            allows <span class="- topic/keyword keyword">SOTI MobiControl</span> to enforce sign-in requirements and validate
+            device and user compliance using your Microsoft Entra ID tenant. <p class="- topic/p p">You integrate your
+                Microsoft account, approve required permissions, and synchronize tenant details with
+                    <span class="- topic/keyword keyword">SOTI MobiControl</span>.</p></section>
+        <section class="- topic/ol task/steps ol steps"><ol class="- topic/ol task/steps ol steps" id="task_f4t_hf5_t2c__steps_qbt_fc1_t2c" data-ofbid="task_f4t_hf5_t2c__steps_qbt_fc1_t2c"><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage</span> in the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Access Management
+                        details</span> section of your Microsoft Authentication SSO
+                    payload.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_kj5_pk1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_kj5_pk1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_yyf_qk1_l2c" src="msa_sso_setup_07.png" alt="Managing conditional access details."/>
+                    </figure>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Credentials</span> to integrate your Microsoft
+                    account.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_mrn_zk1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_mrn_zk1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_udz_zk1_l2c" src="msa_sso_setup_08.png" alt="Integrating your Microsoft account."/>
+                    </figure>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Populate</span> to import the Tenant ID from the
+                    connected Entra ID configuration.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_y4c_hn1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_y4c_hn1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_gsp_hn1_l2c" src="msa_sso_setup_09.png" alt="Selecting Populate in the Populate Tenant ID prompt."/>
+                    </figure>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Enter a name for the Microsoft Access Management integration and select
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_f1f_1r1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_f1f_1r1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_bt3_br1_l2c" src="msa_sso_setup_10.png" alt="Saving the Microsoft Integration."/>
+                    </figure>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Complete the sign-in process through the Microsoft portal by selecting
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Continue</span>. Review and approve all requested
+                    permissions.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_apv_cv1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_apv_cv1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_kpd_2v1_l2c" src="microsoft_sign_in.jpg" alt="Continuing to Microsoft's sign-in page."/>
+                    </figure>
+                    <img class="- topic/image image" id="task_f4t_hf5_t2c__image_ejv_1ww_4xb" src="permission_requested_review.png" height="439" width="237" alt="Review requested permissions"/>
+                    <div class="- topic/note note note note_note" id="task_f4t_hf5_t2c__note_ong_cdz_s2c" data-ofbid="task_f4t_hf5_t2c__note_ong_cdz_s2c"><span class="note__title">Note:</span>  The following table details the permissions
+                        required for Microsoft Intune and Microsoft Graph: <div class="table-container"><table class="- topic/table table dialogtable" id="task_f4t_hf5_t2c__table_f43_cdz_s2c" data-ofbid="task_f4t_hf5_t2c__table_f43_cdz_s2c" data-cols="3"><caption></caption><colgroup><col/><col/><col/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-0 rowsep-0" id="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Permission</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-0" id="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Description</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-0" id="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Purpose</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Intune: manage_partner_compliance_policy</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Needed for the Intune partner service to authenticate
+                                            compliance policies.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Required for all 3rd party MDM compliance partner
+                                            apps.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Intune: update_device_attributes</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Needed for the Intune partner service to authenticate
+                                            compliance policies.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Required for all 3rd party MDM compliance partner
+                                            apps.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph: Application.Read.All</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Required under Microsoft Graph to call the Service
+                                            Endpoint Discovery API.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Required for all 3rd party MDM compliance partner
+                                            apps.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph:
+                                            DeviceManagementServiceConfig.ReadWrite.All</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Needed to create the <span class="- topic/keyword keyword">SOTI MobiControl</span> Compliance partner in Microsoft Intune
+                                            automatically.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Automates adding <span class="- topic/keyword keyword">SOTI MobiControl</span>
+                                            as a compliance partner.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph: Group.Read.All</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Needed for <span class="- topic/keyword keyword">SOTI MobiControl</span> to
+                                            validate Microsoft Entra ID user’s SSO login.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Validates Microsoft Entra ID user’s SSO
+                                            login.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph: User.Read.All</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Needed for <span class="- topic/keyword keyword">SOTI MobiControl</span> to
+                                            validate Microsoft Entra ID user’s SSO login.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Validates Microsoft Entra ID user’s SSO
+                                            login.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph: User.Read (Delegated)</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Configured and added by Microsoft by default when
+                                            registering the <span class="- topic/keyword keyword">SOTI MobiControl</span>
+                                            Device Compliance app.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Ensures successful return of an ID token.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__1">Microsoft Graph: Device.ReadWrite.All</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__2">Allows admins to enforce Microsoft Conditional Access
+                                            for Windows Modern Entra ID Join enrolled
+                                            devices.</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="task_f4t_hf5_t2c__table_f43_cdz_s2c__entry__3">Sets the device’s compliance status in the Entra ID
+                                            portal. </td>
+                                    </tr>
+                                </tbody></table></div></div></div>
+            </li><li class="- topic/li task/step li step"><strong>Optional: </strong>
+                <span class="- topic/ph task/cmd ph cmd">Remove the Device.ReadWrite.All permission from Microsoft Entra ID</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <p class="- topic/p p">If you are only using Android or Apple and do not need Windows Modern
+                        Conditional Access, remove the Device.ReadWrite.All permission from the
+                        Microsoft Entra ID portal:</p>
+                </div>
+                <ol type="a" class="- topic/ol task/substeps ol substeps" id="task_f4t_hf5_t2c__substeps_xh1_fcb_sfc" data-ofbid="task_f4t_hf5_t2c__substeps_xh1_fcb_sfc">
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Open the Microsoft Entra ID portal.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enterprise Applications</span>.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol"><span class="- topic/keyword keyword">SOTI MobiControl</span> Device
+                            Compliance</span>.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Security</span>, then select
+                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Permissions</span>.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Find the Device.ReadWrite.All permission.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Select the three-dot menu next to the permission, then select
+                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remove</span>.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">In <span class="- topic/keyword keyword">SOTI MobiControl</span>, go to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Global
+                            Settings</span>, then select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">SYNC</span>.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">When the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CONSENT</span> button appears in the
+                                <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Access Management</span> section, select it to
+                            re-authorize the permission if needed.</span>
+                        <div class="- topic/itemgroup task/info itemgroup info">
+                            <div class="- topic/note note note note_note" id="task_f4t_hf5_t2c__note_a1b_kcb_sfc" data-ofbid="task_f4t_hf5_t2c__note_a1b_kcb_sfc"><span class="note__title">Note:</span> Removing this permission does not affect
+                                existing iOS, macOS, or Android <span class="- topic/keyword keyword">SOTI MobiControl</span>
+                                Microsoft integrations.</div>
+                        </div>
+                    </li>
+                </ol>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">Upon successful integration, Microsoft redirects you to the <span class="- topic/keyword keyword">SOTI MobiControl</span> console for synchronization. <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_wld_l1g_52c" data-ofbid="task_f4t_hf5_t2c__fig_wld_l1g_52c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_pwh_pw1_l2c" src="msa_sso_setup_13.png" alt="SOTI MobiControl's successful connection message."/>
+                    </figure></div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">SYNC</span> to complete the integration.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_axd_rx1_l2c" data-ofbid="task_f4t_hf5_t2c__fig_axd_rx1_l2c">
+                        <img class="- topic/image image" id="task_f4t_hf5_t2c__image_xv2_tx1_l2c" src="msa_sso_setup_14.png" alt="Syncing Microsoft with SOTI MobiControl"/>
+                    </figure>
+                </div>
+            </li></ol></section>
+        <section class="- topic/section task/result section result" id="task_f4t_hf5_t2c__result_rhx_jq5_t2c" data-ofbid="task_f4t_hf5_t2c__result_rhx_jq5_t2c"><span class="- topic/keyword keyword">SOTI MobiControl</span>  displays an Active
+            account status and confirms that the Tenant ID matches your Microsoft Entra ID
+            tenant.<figure class="- topic/fig fig fignone" id="task_f4t_hf5_t2c__fig_m2t_g1b_l2c" data-ofbid="task_f4t_hf5_t2c__fig_m2t_g1b_l2c">
+                <img class="- topic/image image" id="task_f4t_hf5_t2c__image_j5j_h1b_l2c" src="msa_sso_setup_15.png" alt="Verifying the Tenant ID matching status."/>
+            </figure></section>
+        <section class="- topic/section task/postreq section postreq" id="task_f4t_hf5_t2c__postreq_uvr_4q5_t2c" data-ofbid="task_f4t_hf5_t2c__postreq_uvr_4q5_t2c">Proceed with configuring Microsoft Authenticator SSO for
+            your iOS/ iPadOS devices by defining the Extensible SSO URL prefixes. See <a class="- topic/xref xref" href="define_extensbile_sso_for_microsoft_authenticator_sso_ios_ipados.html" title="Add Microsoft URL prefixes to the Extensible Single Sign-On (SSO) configuration so the Microsoft Authenticator app can detect and process authentication requests for supported Microsoft services.">Define Extensible SSO for Microsoft Authenticator SSO (iOS/ iPadOS)</a>.</section>
+    </div>
+    
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../new_feature_documentation.html" title="Documented New Features">Documented New Features</a></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="microsoft_authenticator_sso_for_ios_devices.html" title="Set up Microsoft Authenticator SSO on iOS or iPadOS devices to streamline sign-in across Microsoft Authentication Library (MSAL) apps, such as Microsoft Teams or Outlook.">Configuring Microsoft Authenticator Single Sign-On (iOS/ iPadOS)</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div>Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+ &lt;oXygen/&gt; XML WebHelp
+ </a></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

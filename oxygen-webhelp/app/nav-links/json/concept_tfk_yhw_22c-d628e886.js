@@ -1,0 +1,1 @@
+oxy_webhelp_navlinks = {"concept_tfk_yhw_22c-d628e886":{"topics":[{"title":"Available Device Details","href":"Device%20Information\/device_details_by_platform.html","attributes":{"data-id":"reference_b5c_ylp_vcc"},"menu":{"hasChildren":false},"tocID":"reference_b5c_ylp_vcc-d628e898","topics":[]}]}};
