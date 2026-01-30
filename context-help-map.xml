@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="concept_jjw_bqv_b3c" path="new_feature_documentation.html"/>
+   <appContext helpID="task_o3r_tqm_k2c"
+               path="Microsoft%20Authenticator/microsoft_authenticator_sso_for_ios_devices.html"/>
+   <appContext helpID="assigning_user_licenses_in_entra_id_azure_ad"
+               path="Microsoft%20Authenticator/assigning_user_licenses_in_entra_id_azure_ad.html"/>
+   <appContext helpID="task_lnn_wk5_t2c"
+               path="Microsoft%20Authenticator/adding_a_microsoft_authenticator_sso_payload_ios_ipados.html"/>
+   <appContext helpID="task_o3r_tqm_k2c"
+               path="Microsoft%20Authenticator/configuring_the_microsoft_entra_id_connection.html"/>
+   <appContext helpID="task_f4t_hf5_t2c"
+               path="Microsoft%20Authenticator/configure_conditional_access_for_microsoft_authenticator_sso_ios.html"/>
+   <appContext helpID="task_pnx_mr5_t2c"
+               path="Microsoft%20Authenticator/define_extensbile_sso_for_microsoft_authenticator_sso_ios_ipados.html"/>
+   <appContext helpID="task_egm_2w5_t2c"
+               path="Microsoft%20Authenticator/deploying_the_microsoft_authenticator_sso_configuration_ios_ipados.html"/>
+   <appContext helpID="task_fcz_52b_l2c"
+               path="Microsoft%20Authenticator/using_the_microsoft_sso_configuration.html"/>
+   <appContext helpID="concept_m4v_hzj_fdc"
+               path="SOTI%20VPN/using_soti_vpn_servers_dita.html"/>
+   <appContext helpID="concept_vvv_l1x_2dc"
+               path="SOTI%20VPN/configuring_soti_vpn_service_settings.html"/>
+   <appContext helpID="task_vdl_ypd_fdc"
+               path="SOTI%20VPN/enrolling_soti_vpn_servers.html"/>
+   <appContext helpID="task_ylb_dfr_fdc"
+               path="SOTI%20VPN/configuring_soti_vpn_server_settings.html"/>
+   <appContext helpID="concept_vpn_clients_overview"
+               path="SOTI%20VPN/configuring_soti_vpn_clients.html"/>
+   <appContext helpID="task_g13_t5l_32c"
+               path="SOTI%20VPN/configuring_vpn_clients_for_android.html"/>
+   <appContext helpID="task_asr_gbg_32c"
+               path="SOTI%20VPN/configuring_vpn_clients_for_ios_ipados.html"/>
+   <appContext helpID="windowsmodern"
+               path="SOTI%20VPN/configuring_soti_vpn_client_windows_modern.html"/>
+   <appContext helpID="lockdown_wizard_overview" path="Lockdown/lockdown_wizard.html"/>
+   <appContext helpID="lockdown-wizard-configuration"
+               path="Lockdown/Using_the_lockdown_wizard.html"/>
+   <appContext helpID="task_rr3_2lv_bgc" path="Lockdown/lockdown_editor_overview.html"/>
+   <appContext helpID="concept_q1g_qwj_vgc"
+               path="Lockdown/creating_lockdown_home_screens.html"/>
+   <appContext helpID="task_rr3_2lv_bgc" path="Lockdown/lockdown_editor.html"/>
+   <appContext helpID="task_dmb_rss_dgc" path="Lockdown/lockdown_settings.html"/>
+   <appContext helpID="task_qlf_hr5_wgc"
+               path="Lockdown/editing_a_lockdown_home_screen.html"/>
+   <appContext helpID="task_pss_4pz_tgc" path="Lockdown/delete_home_screen.html"/>
+   <appContext helpID="task_hzb_lkm_dgc" path="Lockdown/templates.html"/>
+   <appContext helpID="concept_snap_for_lockdown_prerequisites"
+               path="Lockdown/soti_snap_lockdown_prerequisite.html"/>
+   <appContext helpID="concept_tj1_ypv_b3c" path="improvement_work.html"/>
+   <appContext helpID="system_certificate_authorities"
+               path="Certificates/certificates_authorities.html"/>
+   <appContext helpID="pconfig_security_cert" path="Certificates/certificates.html"/>
+   <appContext helpID="vendorcompatmatrix_certificates_androidplus"
+               path="Certificates/vendorcompatmatrix_certificates_androidplus.html"/>
+   <appContext helpID="concept_d2f_tpb_tcc"
+               path="Certificates/using_the_certificates_dashboard.html"/>
+   <appContext helpID="concept_nlz_4n2_kfc"
+               path="Certificates/deploying_dynamic_certificates_0.html"/>
+   <appContext helpID="certificates_add" path="Certificates/add.html"/>
+   <appContext helpID="globalsetting_certificate_authorities"
+               path="Certificates/certificate_authorities.html"/>
+   <appContext helpID="certificates_issue" path="Certificates/issuing.html"/>
+   <appContext helpID="task_q3n_nd2_kfc"
+               path="Certificates/deploying_dynamic_certificates.html"/>
+   <appContext helpID="globalsetting_certificate_template"
+               path="Certificates/certificate_template.html"/>
+   <appContext helpID="globalsetting_certificate_san"
+               path="Certificates/certificate_san.html"/>
+   <appContext helpID="task_qmx_mt2_kfc"
+               path="Certificates/deploying_dynamic_certificates_1.html"/>
+   <appContext helpID="certificates_management" path="Certificates/viewing.html"/>
+   <appContext helpID="using_signal_policies" path="signal/using_signal_policies.html"/>
+   <appContext helpID="concept_ccg_v14_xcc"
+               path="signal/alert_rules_to_signal_policies_on_mobicontrol_upgrade.html"/>
+   <appContext helpID="signal_policy_wizard_overview"
+               path="signal/signal_policy_wizard_overview.html"/>
+   <appContext helpID="signal_create_new" path="signal/create_signal_policy.html"/>
+   <appContext helpID="building_signal_conditions"
+               path="signal/building_signal_conditions.html"/>
+   <appContext helpID="signal_condition_reference"
+               path="signal/signal_condition_reference.html"/>
+   <appContext helpID="reference_umv_14k_c3c"
+               path="signal/signal_policy_device_attributes_and_properties.html"/>
+   <appContext helpID="reference_kkf_lrk_c3c"
+               path="signal/signal_policy_system_components_properties_and_events.html"/>
+   <appContext helpID="reference_z1f_55k_c3c"
+               path="signal/signal_policy_configuration_properties_and_events.html"/>
+   <appContext helpID="configuring_signal_policy_settings"
+               path="signal/configuring_signal_policy_settings.html"/>
+   <appContext helpID="reference_mrv_fzn_ncc"
+               path="signal/device_side_evaluation_list.html"/>
+   <appContext helpID="signal_add_action" path="signal/adding_signal_actions.html"/>
+   <appContext helpID="signal_action_reference"
+               path="signal/signal_action_reference.html"/>
+   <appContext helpID="signal_schedule" path="signal/defining_signal_schedule.html"/>
+   <appContext helpID="signal_view_policy" path="signal/view_edit_signal.html"/>
+   <appContext helpID="signal_policy_examples" path="signal/signal_examples.html"/>
+   <appContext helpID="install_signal" path="signal/install_signal_policies.html"/>
+   <appContext helpID="start_device_details"
+               path="Device%20Information/device_information.html"/>
+   <appContext helpID="concept_tfk_yhw_22c"
+               path="Device%20Information/the_device_details_tab.html"/>
+   <appContext helpID="reference_b5c_ylp_vcc"
+               path="Device%20Information/device_details_by_platform.html"/>
+   <appContext helpID="concept_zdh_hf3_j2c"
+               path="Device%20Information/the_compliance_tab.html"/>
+   <appContext helpID="concept_gvy_l13_xfc"
+               path="Device%20Information/the_script_tab.html"/>
+   <appContext helpID="concept_vrb_jnx_22c"
+               path="Device%20Information/the_configurations_tab.html"/>
+   <appContext helpID="concept_u5n_xnx_22c"
+               path="Device%20Information/the_hardware_tab.html"/>
+   <appContext helpID="concept_imf_j3w_22c"
+               path="Device%20Information/the_sync_history_tab.html"/>
+   <appContext helpID="concept_d21_wsn_g2c"
+               path="Device%20Information/the_services_tab.html"/>
+</map>

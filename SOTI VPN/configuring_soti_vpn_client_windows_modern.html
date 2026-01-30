@@ -1,0 +1,222 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="description" content="Configure SOTI VPN client settings for Windows Modern devices using the VPN profile payload to assign servers, manage network access, and enable features such as split tunneling."/><meta name="DC.relation" content="../SOTI%20VPN/configuring_soti_vpn_clients.html"/><meta name="DC.relation" content="configuring_soti_vpn_clients.html"/><meta name="DC.relation" content="../new_feature_documentation.html"/><meta name="DC.creator" content="Aiman Nabeel"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="windowsmodern"/>        
+      <title>Configuring VPN Clients for Windows Modern</title><!--  Generated with Oxygen version 26.0, build number 2024012323.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="windowsmodern-d628e367"/><meta name="wh-source-relpath" content="SOTI%20VPN/configuring_soti_vpn_client_windows_modern.dita"/><meta name="wh-out-relpath" content="SOTI VPN/configuring_soti_vpn_client_windows_modern.html"/>
+
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/commons.css?buildId=2024012323"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2024012323"/>
+
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260129185623"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2024012323"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260129185623"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2024012323"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2024012323"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-gray.css?buildId=2024012323"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=2024012323"/></head>
+
+    <body id="windowsmodern" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Improvement Work</span>  </span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_jjw_bqv_b3c-d628e165-mi" data-tocid="concept_jjw_bqv_b3c-d628e165" data-state="not-ready" class=" topicref " data-id="concept_jjw_bqv_b3c"><span class="title"><a href="../new_feature_documentation.html">Documented New Features</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_tj1_ypv_b3c-d628e505-mi" data-tocid="concept_tj1_ypv_b3c-d628e505" data-state="not-ready" class=" topicref " data-id="concept_tj1_ypv_b3c"><span class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="concept_jjw_bqv_b3c"><div class="title"><a href="../new_feature_documentation.html">Documented New Features</a></div></div></li><li><div class="topicref" data-id="concept_m4v_hzj_fdc"><div class="title"><a href="../SOTI%20VPN/using_soti_vpn_servers_dita.html">Using SOTI VPN</a></div></div></li><li><div class="topicref" data-id="concept_vpn_clients_overview"><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_clients.html">Configuring <span class="keyword">SOTI</span> VPN Clients</a></div></div></li><li class="active"><div class="topicref" data-id="windowsmodern"><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_client_windows_modern.html">Configuring VPN Clients for Windows Modern</a><div class="wh-tooltip"><p class="shortdesc">Configure <span class="keyword">SOTI</span> VPN client settings for Windows Modern         devices using the VPN profile payload to assign servers, manage network access, and enable         features such as split tunneling.</p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="concept_jjw_bqv_b3c-d628e165" class="topicref" data-id="concept_jjw_bqv_b3c" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_jjw_bqv_b3c-d628e165-link" class="wh-expand-btn"></span><div class="title"><a href="../new_feature_documentation.html" id="concept_jjw_bqv_b3c-d628e165-link">Documented New Features</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="task_o3r_tqm_k2c-d628e175" class="topicref" data-id="task_o3r_tqm_k2c" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action task_o3r_tqm_k2c-d628e175-link" class="wh-expand-btn"></span><div class="title"><a href="../Microsoft%20Authenticator/microsoft_authenticator_sso_for_ios_devices.html" id="task_o3r_tqm_k2c-d628e175-link">Configuring Microsoft Authenticator Single Sign-On (iOS/ iPadOS)</a><div class="wh-tooltip"><p class="shortdesc">Set up Microsoft Authenticator SSO on iOS or iPadOS devices to streamline sign-in         across Microsoft Authentication Library (MSAL) apps, such as Microsoft Teams or         Outlook.</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="concept_m4v_hzj_fdc-d628e276" class="topicref" data-id="concept_m4v_hzj_fdc" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_m4v_hzj_fdc-d628e276-link" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/using_soti_vpn_servers_dita.html" id="concept_m4v_hzj_fdc-d628e276-link">Using SOTI VPN</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="concept_vvv_l1x_2dc-d628e286" class="topicref" data-id="concept_vvv_l1x_2dc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_service_settings.html" id="concept_vvv_l1x_2dc-d628e286-link">SOTI VPN | Configuring Service Settings</a></div></div></li><li role="treeitem"><div data-tocid="task_vdl_ypd_fdc-d628e296" class="topicref" data-id="task_vdl_ypd_fdc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/enrolling_soti_vpn_servers.html" id="task_vdl_ypd_fdc-d628e296-link">Enrolling SOTI VPN Servers</a></div></div></li><li role="treeitem"><div data-tocid="task_ylb_dfr_fdc-d628e306" class="topicref" data-id="task_ylb_dfr_fdc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_server_settings.html" id="task_ylb_dfr_fdc-d628e306-link">Configuring SOTI VPN Server Settings</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="concept_vpn_clients_overview-d628e316" class="topicref" data-id="concept_vpn_clients_overview" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_vpn_clients_overview-d628e316-link" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_clients.html" id="concept_vpn_clients_overview-d628e316-link">Configuring <span class="keyword">SOTI</span> VPN Clients</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="task_g13_t5l_32c-d628e329" class="topicref" data-id="task_g13_t5l_32c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_vpn_clients_for_android.html" id="task_g13_t5l_32c-d628e329-link">Configuring <span class="keyword">SOTI</span> VPN Clients for Android</a><div class="wh-tooltip"><p class="shortdesc">Configure <span class="keyword">SOTI</span> VPN client settings for Android devices         using the VPN profile payload to assign servers, manage network access, and enable features         such as split tunneling.</p></div></div></div></li><li role="treeitem"><div data-tocid="task_asr_gbg_32c-d628e348" class="topicref" data-id="task_asr_gbg_32c" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_vpn_clients_for_ios_ipados.html" id="task_asr_gbg_32c-d628e348-link">Configuring <span class="keyword">SOTI</span> VPN Clients for iOS/iPadOS</a><div class="wh-tooltip"><p class="shortdesc">Configure <span class="keyword">SOTI</span> VPN client settings for iOS/iPadOS devices         using the VPN profile payload to assign servers, manage network access, and enable features         such as split tunneling.</p></div></div></div></li><li role="treeitem" class="active"><div data-tocid="windowsmodern-d628e367" class="topicref" data-id="windowsmodern" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../SOTI%20VPN/configuring_soti_vpn_client_windows_modern.html" id="windowsmodern-d628e367-link">Configuring VPN Clients for Windows Modern</a><div class="wh-tooltip"><p class="shortdesc">Configure <span class="keyword">SOTI</span> VPN client settings for Windows Modern         devices using the VPN profile payload to assign servers, manage network access, and enable         features such as split tunneling.</p></div></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="lockdown_wizard_overview-d628e383" class="topicref" data-id="lockdown_wizard_overview" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action lockdown_wizard_overview-d628e383-link" class="wh-expand-btn"></span><div class="title"><a href="../Lockdown/lockdown_wizard.html" id="lockdown_wizard_overview-d628e383-link">The Lockdown Wizard | Overview</a></div></div></li></ul></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="ariaid-title1">
+    
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Configuring VPN Clients for Windows Modern</h1>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Configure <span class="- topic/keyword keyword">SOTI</span> VPN client settings for Windows Modern
+        devices using the VPN profile payload to assign servers, manage network access, and enable
+        features such as split tunneling.</p>
+        
+        <section class="- topic/section task/context section context" id="windowsmodern__context_ks5_lsb_2gc" data-ofbid="windowsmodern__context_ks5_lsb_2gc">Use this task to configure the <span class="- topic/keyword keyword">SOTI</span> Virtual Private Network (VPN) client settings through the
+                <span class="- topic/keyword keyword">SOTI MobiControl</span>
+            <span class="- topic/keyword keyword">SOTI</span> VPN Windows Modern profile payload. You can use the
+            profile payload to assign VPN servers, disable VPN on corporate/ internal networks,
+            enable split tunnel, and more.</section>
+        <section class="- topic/ol task/steps ol steps"><ol class="- topic/ol task/steps ol steps" id="windowsmodern__steps_izv_xnb_2gc" data-ofbid="windowsmodern__steps_izv_xnb_2gc"><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Create or edit a <span class="- topic/keyword keyword">SOTI</span> Windows Modern profile
+                    configuration and add the <span class="- topic/keyword keyword">SOTI</span> VPN payload.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="windowsmodern__fig_ahc_vsb_2gc" data-ofbid="windowsmodern__fig_ahc_vsb_2gc">
+                        <img class="- topic/image image" id="windowsmodern__image_omr_vsb_2gc" src="selecting_vpn_windows_modern.png" alt="Selecting the SOTI VPN profile configuration in a Windows Modern profile."/>
+                    </figure>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">VPN Servers</span> section, select <span class="- topic/ph ph ngui-icon-addpackage"></span> (Add) to add a VPN server.</span>
+                <ol type="a" class="- topic/ol task/substeps ol substeps" id="windowsmodern__substeps_ncr_stb_2gc" data-ofbid="windowsmodern__substeps_ncr_stb_2gc">
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Enter the external <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Address</span> of the VPN
+                            server.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Specify the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Port</span>.</span>
+                        <div class="- topic/itemgroup task/info itemgroup info">
+                            <div class="- topic/p p">
+                                <div class="- topic/note note note note_note" id="windowsmodern__note_ocr_stb_2gc" data-ofbid="windowsmodern__note_ocr_stb_2gc"><span class="note__title">Note:</span> You may specify a different port
+                                    number for traffic forwarding if necessary; however, make
+                                    sure to use port 51820 for forwarding traffic to the
+                                    <span class="- topic/keyword keyword">SOTI</span> VPN server.</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="- topic/li task/substep li substep substepexpand">
+                        <span class="- topic/ph task/cmd ph cmd">Select the VPN server from the enrolled list.</span>
+                        <div class="- topic/itemgroup task/info itemgroup info">
+                            <div class="- topic/note note remember note_remember" id="windowsmodern__note_pcr_stb_2gc" data-ofbid="windowsmodern__note_pcr_stb_2gc"><span class="note__title">Remember:</span> When selecting a VPN server,
+                                you see a list of all enrolled VPN servers that you have permissions
+                                to assign. If you do not see your VPN server listed, verify that the
+                                user has the Assign VPN Servers permissions. Also, make sure that
+                                the server itself is enabled.</div>
+                        </div>
+                    </li>
+                </ol>
+            </li><li class="- topic/li task/step li step"><strong>Optional: </strong>
+                <span class="- topic/ph task/cmd ph cmd">Enter the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Internal DNS Server Address</span> used to
+                    resolve internal enterprise domains.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/note note note note_note" id="windowsmodern__note_qcr_stb_2gc" data-ofbid="windowsmodern__note_qcr_stb_2gc"><span class="note__title">Note:</span> If left blank, the device’s default DNS is used
+                        to resolve FQDNs.</div>
+                </div>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Enable <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Split-tunnel VPN</span> to route only selected
+                    traffic through the VPN.</span>
+                <ol type="a" class="- topic/ol task/substeps ol substeps" id="windowsmodern__substeps_m21_25b_2gc" data-ofbid="windowsmodern__substeps_m21_25b_2gc">
+                    <li class="- topic/li task/substep li substep">
+                        <span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tunneled Resources</span> section, select
+                            <span class="- topic/ph ph ngui-icon-addpackage"></span> (Add) to enter IP
+                            ranges using CIDR notation.</span>
+                    </li>
+                </ol>
+            </li><li class="- topic/li task/step li step">
+                <span class="- topic/ph task/cmd ph cmd">Save the profile and assign it to the appropriate Windows Modern device
+                    groups.</span>
+            </li></ol></section>
+        <section class="- topic/section task/result section result" id="windowsmodern__result_rbn_45b_2gc" data-ofbid="windowsmodern__result_rbn_45b_2gc">Your devices receive the <span class="- topic/keyword keyword">SOTI</span>
+            VPN configuration from the profile.</section>
+    </div>
+    
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="configuring_soti_vpn_clients.html" title="Configuring SOTI VPN Clients">Configuring SOTI VPN Clients</a></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../new_feature_documentation.html" title="Documented New Features">Documented New Features</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div>Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+ &lt;oXygen/&gt; XML WebHelp
+ </a></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
