@@ -1,0 +1,247 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="task"/><meta name="description" content="Deploy externally sourced certificates to devices using the Certificates profile configuration in SOTI MobiControl."/><meta name="DC.relation" content="../Certificates/certificates_authorities.html"/><meta name="DC.relation" content="../Certificates/vendorcompatmatrix_certificates_androidplus.html"/><meta name="DC.relation" content="certificates_authorities.html"/><meta name="DC.relation" content="../improvement_work.html"/><meta name="DC.creator" content="Aiman Nabeel"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="pconfig_security_cert"/><meta name="DC.language" content="en"/>        
+      <title>Deploying Manually Uploaded Certificates</title><!--  Generated with Oxygen version 26.0, build number 2024012323.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="pconfig_security_cert-d628e531"/><meta name="wh-source-relpath" content="Certificates/certificates.dita"/><meta name="wh-out-relpath" content="Certificates/certificates.html"/>
+
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/commons.css?buildId=2024012323"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2024012323"/>
+
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260129185623"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2024012323"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260129185623"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2024012323"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2024012323"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-gray.css?buildId=2024012323"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=2024012323"/></head>
+
+    <body id="pconfig_security_cert" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Improvement Work</span>  </span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_jjw_bqv_b3c-d628e165-mi" data-tocid="concept_jjw_bqv_b3c-d628e165" data-state="not-ready" class=" topicref " data-id="concept_jjw_bqv_b3c"><span class="title"><a href="../new_feature_documentation.html">Documented New Features</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_tj1_ypv_b3c-d628e505-mi" data-tocid="concept_tj1_ypv_b3c-d628e505" data-state="not-ready" class=" topicref " data-id="concept_tj1_ypv_b3c"><span class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="concept_tj1_ypv_b3c"><div class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></div></div></li><li><div class="topicref" data-id="system_certificate_authorities"><div class="title"><a href="../Certificates/certificates_authorities.html">Managing Certificates</a><div class="wh-tooltip"><p class="shortdesc">Manage and deploy digital certificates in <span class="keyword">SOTI MobiControl</span>, including 		manual uploads and dynamic certificates issued via integrated certificate 		authorities.</p></div></div></div></li><li class="active"><div class="topicref" data-id="pconfig_security_cert"><div class="title"><a href="../Certificates/certificates.html">Deploying Manually Uploaded Certificates</a><div class="wh-tooltip"><p class="shortdesc">Deploy externally sourced certificates to devices using the Certificates profile 		configuration in <span class="keyword">SOTI MobiControl</span>. </p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="concept_tj1_ypv_b3c-d628e505" class="topicref" data-id="concept_tj1_ypv_b3c" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_tj1_ypv_b3c-d628e505-link" class="wh-expand-btn"></span><div class="title"><a href="../improvement_work.html" id="concept_tj1_ypv_b3c-d628e505-link">Improved Existing Documentation</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="system_certificate_authorities-d628e515" class="topicref" data-id="system_certificate_authorities" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action system_certificate_authorities-d628e515-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/certificates_authorities.html" id="system_certificate_authorities-d628e515-link">Managing Certificates</a><div class="wh-tooltip"><p class="shortdesc">Manage and deploy digital certificates in <span class="keyword">SOTI MobiControl</span>, including 		manual uploads and dynamic certificates issued via integrated certificate 		authorities.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="pconfig_security_cert-d628e531" class="topicref" data-id="pconfig_security_cert" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action pconfig_security_cert-d628e531-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/certificates.html" id="pconfig_security_cert-d628e531-link">Deploying Manually Uploaded Certificates</a><div class="wh-tooltip"><p class="shortdesc">Deploy externally sourced certificates to devices using the Certificates profile 		configuration in <span class="keyword">SOTI MobiControl</span>. </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="vendorcompatmatrix_certificates_androidplus-d628e547" class="topicref" data-id="vendorcompatmatrix_certificates_androidplus" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/vendorcompatmatrix_certificates_androidplus.html" id="vendorcompatmatrix_certificates_androidplus-d628e547-link">Android Plus Vendor Compatibility Matrix: Certificates</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="concept_d2f_tpb_tcc-d628e557" class="topicref" data-id="concept_d2f_tpb_tcc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/using_the_certificates_dashboard.html" id="concept_d2f_tpb_tcc-d628e557-link">Using the Certificates Dashboard</a><div class="wh-tooltip"><p class="shortdesc">The Certificates Dashboard in <span class="keyword">SOTI MobiControl</span> offers a centralized         view and management of all deployed certificates. It features interactive charts, detailed         tables for static and dynamic certificates, advanced filtering, and bulk actions like         renewal and revocation all in one place.</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_nlz_4n2_kfc-d628e573" class="topicref" data-id="concept_nlz_4n2_kfc" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_nlz_4n2_kfc-d628e573-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/deploying_dynamic_certificates_0.html" id="concept_nlz_4n2_kfc-d628e573-link">Deploying Managed (Dynamic) Certificates</a><div class="wh-tooltip"><p class="shortdesc">Use integrated Certificate Authority (CA) services in <span class="keyword">SOTI MobiControl</span> to automatically deploy, renew, and manage dynamic         certificates for secure device authentication. </p></div></div></div></li><li role="treeitem"><div data-tocid="certificates_management-d628e686" class="topicref" data-id="certificates_management" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/viewing.html" id="certificates_management-d628e686-link">Managing Certificates on a Device</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="using_signal_policies-d628e696" class="topicref" data-id="using_signal_policies" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action using_signal_policies-d628e696-link" class="wh-expand-btn"></span><div class="title"><a href="../signal/using_signal_policies.html" id="using_signal_policies-d628e696-link">Using Signal Policies</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="start_device_details-d628e876" class="topicref" data-id="start_device_details" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action start_device_details-d628e876-link" class="wh-expand-btn"></span><div class="title"><a href="../Device%20Information/device_information.html" id="start_device_details-d628e876-link">Viewing Device Information</a></div></div></li></ul></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic task/task topic task" role="article" aria-labelledby="ariaid-title1">
+	
+	
+
+	<h1 class="- topic/title title topictitle1" id="ariaid-title1">Deploying Manually Uploaded Certificates</h1>
+	
+
+	<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Deploy externally sourced certificates to devices using the Certificates profile
+		configuration in <span class="- topic/keyword keyword">SOTI MobiControl</span>. </p>
+		<section class="- topic/section task/prereq section prereq" id="pconfig_security_cert__prereq_jkt_g15_kfc" data-ofbid="pconfig_security_cert__prereq_jkt_g15_kfc">You must have <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage Profile</span>
+			permissions.</section><section class="- topic/section task/context section context">Enterprise resources or networks may require devices to authenticate using digital
+			certificates. <span class="- topic/keyword keyword">SOTI MobiControl</span> enables you to deploy manually uploaded
+			(externally sourced) certificates using the Certificates profile configuration. Upload,
+			configure, and assign certificates within a profile, with platform-specific options
+			available for Android, Apple, and Windows devices.<div class="- topic/note note note note_note"><span class="note__title">Note:</span> To issue managed certificates
+				using dynamic templates, see <a class="- topic/xref xref" href="deploying_dynamic_certificates_0.html" title="Use integrated Certificate Authority (CA) services in SOTI MobiControl to automatically deploy, renew, and manage dynamic certificates for secure device authentication.">Deploying Managed (Dynamic) Certificates</a>.</div></section>
+		<section class="- topic/ol task/steps ol steps"><ol class="- topic/ol task/steps ol steps"><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">From the main menu, select <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Profiles</span>.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Profiles</span> view, either create a new profile or
+					select an existing profile.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">On your profile, navigate to the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Configurations</span> tab and
+					select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span> (<span class="- topic/ph ph ngui-icon-addnew"></span>).</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Certificates</span> from the
+						<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Security</span> section.</span>
+				<div class="- topic/itemgroup task/info itemgroup info">
+					<figure class="- topic/fig fig fignone" id="pconfig_security_cert__fig_ffw_kc5_kfc" data-ofbid="pconfig_security_cert__fig_ffw_kc5_kfc">
+						<img class="- topic/image image" id="pconfig_security_cert__image_ulp_mc5_kfc" src="certificates_configuration.png" alt="Selecting the Certificates profile configuration in an Android profile."/>
+					</figure>
+				</div>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Certificates</span> panel, select the Add Certificates
+					icon (<span class="- topic/ph ph ngui-icon-import"></span>).</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add Certificate</span> Panel, select
+						<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Browse</span> (<span class="- topic/ph ph ngui-icon-addnew"></span>) to
+					upload the certificate.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">Enter the certificate’s password if prompted.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Import</span> (<span class="- topic/ph ph ngui-icon-import"></span>) to
+					upload the certificate. Once uploaded, the certificate is available for
+					selection in your certificate payload.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">To configure certificate usage in a profile:</span>
+				<div class="- topic/itemgroup task/info itemgroup info">
+					<ul class="- topic/ul ul" id="pconfig_security_cert__ul_iqk_xl4_nfc" data-ofbid="pconfig_security_cert__ul_iqk_xl4_nfc">
+						<li class="- topic/li li">
+							<p class="- topic/p p">Toggle <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Selected</span> to select which certificate(s)
+								to distribute when applying the profile.</p>
+							<div class="- topic/p p">
+								<figure class="- topic/fig fig fignone" id="pconfig_security_cert__fig_mm3_13d_vgc" data-ofbid="pconfig_security_cert__fig_mm3_13d_vgc">
+									<img class="- topic/image image" id="pconfig_security_cert__image_lkm_b3d_vgc" src="selecting_an_uploaded_certificate.png" alt="Selecting an uploaded certificate for deployment."/>
+								</figure>
+							</div>
+						</li>
+						<li class="- topic/li li">
+							<p class="- topic/p p">Enable or disable the toggle next to a certificate to include or
+								exclude it from the profile.</p>
+						</li>
+						<li class="- topic/li li">
+							<p class="- topic/p p">You can add multiple certificates to a single profile.</p>
+						</li>
+					</ul>
+				</div>
+			</li></ol><div class="- topic/li task/stepsection li stepsection">
+				<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Android Plus Consideration</strong></p>
+				<div class="- topic/p p">You must also assign an Authentication profile configuration with a User Password
+					Policy. This can be in the same profile or a separate one. <div class="- topic/note note tip note_tip" id="pconfig_security_cert__note_z54_5dn_pfc" data-ofbid="pconfig_security_cert__note_z54_5dn_pfc"><span class="note__title">Tip:</span> For compatibility of vendors by certificate
+						deployment options, see <a class="- topic/xref xref" href="vendorcompatmatrix_certificates_androidplus.html">Android Plus Vendor Compatibility Matrix: Certificates</a>.</div></div>
+				<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Apple Consideration (for PKCS #12 Certificates)</strong></p>
+				<div class="- topic/p p">Configure the following additional options:<ul class="- topic/ul ul" id="pconfig_security_cert__ul_bjv_yw4_nfc" data-ofbid="pconfig_security_cert__ul_bjv_yw4_nfc">
+						<li class="- topic/li li">Allow all apps access: Grants access to the private key for all
+							apps.</li>
+						<li class="- topic/li li">Extractable key: Enables the private key to be exported from the key
+							chain.</li>
+					</ul></div>
+				<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Windows Modern Desktop Considerations</strong></p>
+				<p class="- topic/p p">Configure the following additional options:</p>
+				<div class="- topic/p p">Target Certificate Store: Specify the store to install your certificate. Choose
+					Device or User store. <ul class="- topic/ul ul" id="pconfig_security_cert__ul_ozg_2x4_nfc" data-ofbid="pconfig_security_cert__ul_ozg_2x4_nfc">
+						<li class="- topic/li li"> Root Certificate Installation Location: You cannot install Root
+							certificates in the Trusted Root CA location of the User store.</li>
+					</ul></div>
+				<div class="- topic/note note important note_important" id="pconfig_security_cert__note_qzr_22n_pfc" data-ofbid="pconfig_security_cert__note_qzr_22n_pfc"><span class="note__title">Important:</span> Client PFX Certificates are supported
+					only on Windows 10 or later; they are ignored on older versions.</div>
+			</div><ol class="- topic/ol task/steps ol steps" start="10"><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">To delete a certificate, select
+						<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span> (<span class="- topic/ph ph ngui-icon-delete"></span>). This
+					permanently removes it from the list.</span>
+			</li><li class="- topic/li task/step li step">
+				<span class="- topic/ph task/cmd ph cmd">Once configured, assign the profile to your devices to install your
+					certificates.</span>
+			</li></ol></section>
+		<section class="- topic/section task/result section result" id="pconfig_security_cert__result_hsg_pf5_kfc" data-ofbid="pconfig_security_cert__result_hsg_pf5_kfc">The uploaded certificate(s) install on your device with an
+			installed installation status.</section></div>
+	
+
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo" xml:lang="en" lang="en"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="certificates_authorities.html" title="Manage and deploy digital certificates in SOTI MobiControl, including manual uploads and dynamic certificates issued via integrated certificate authorities.">Managing Certificates</a></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../improvement_work.html" title="Improved Existing Documentation">Improved Existing Documentation</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div>Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+ &lt;oXygen/&gt; XML WebHelp
+ </a></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

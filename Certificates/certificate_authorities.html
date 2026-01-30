@@ -1,0 +1,548 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="26.0">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="DC.rights.owner" content="(C) Copyright 2026"/><meta name="copyright" content="(C) Copyright 2026"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="reference"/><meta name="description" content="Use the Certificate Authority dialog box in SOTI MobiControl to integrate supported CA services—such as ADCS, ACME, EJBCA, Entrust, Sectigo, and SCEP."/><meta name="DC.relation" content="../Certificates/add.html"/><meta name="DC.relation" content="../Certificates/issuing.html"/><meta name="DC.relation" content="add.html"/><meta name="DC.relation" content="../improvement_work.html"/><meta name="DC.creator" content="Aiman Nabeel"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="globalsetting_certificate_authorities"/><meta name="DC.language" content="en"/>        
+      <title>Certificate Authority Integration Details</title><!--  Generated with Oxygen version 26.0, build number 2024012323.  --><meta name="wh-path2root" content="../"/><meta name="wh-toc-id" content="globalsetting_certificate_authorities-d628e605"/><meta name="wh-source-relpath" content="Certificates/certificate_authorities.dita"/><meta name="wh-out-relpath" content="Certificates/certificate_authorities.html"/>
+
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/commons.css?buildId=2024012323"/>
+    <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2024012323"/>
+
+    <script src="../oxygen-webhelp/app/options/properties.js?buildId=20260129185623"></script>
+    <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2024012323"></script>
+    <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20260129185623"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2024012323"></script>
+    <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2024012323"></script>
+<link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/oxygen-gray.css?buildId=2024012323"/><link rel="stylesheet" type="text/css" href="../oxygen-webhelp/template/notes.css?buildId=2024012323"/></head>
+
+    <body id="globalsetting_certificate_authorities" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    
+                    <div class=" wh_publication_title "><a href="../index.html"><span class="booktitle">  <span class="ph mainbooktitle">Improvement Work</span>  </span></a></div>
+                    
+                </div>
+                
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu " aria-label="Menu Container"><ul role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_jjw_bqv_b3c-d628e165-mi" data-tocid="concept_jjw_bqv_b3c-d628e165" data-state="not-ready" class=" topicref " data-id="concept_jjw_bqv_b3c"><span class="title"><a href="../new_feature_documentation.html">Documented New Features</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="concept_tj1_ypv_b3c-d628e505-mi" data-tocid="concept_tj1_ypv_b3c-d628e505" data-state="not-ready" class=" topicref " data-id="concept_tj1_ypv_b3c"><span class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></span></span></li></ul></nav>
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="concept_tj1_ypv_b3c"><div class="title"><a href="../improvement_work.html">Improved Existing Documentation</a></div></div></li><li><div class="topicref" data-id="system_certificate_authorities"><div class="title"><a href="../Certificates/certificates_authorities.html">Managing Certificates</a><div class="wh-tooltip"><p class="shortdesc">Manage and deploy digital certificates in <span class="keyword">SOTI MobiControl</span>, including 		manual uploads and dynamic certificates issued via integrated certificate 		authorities.</p></div></div></div></li><li><div class="topicref" data-id="concept_nlz_4n2_kfc"><div class="title"><a href="../Certificates/deploying_dynamic_certificates_0.html">Deploying Managed (Dynamic) Certificates</a><div class="wh-tooltip"><p class="shortdesc">Use integrated Certificate Authority (CA) services in <span class="keyword">SOTI MobiControl</span> to automatically deploy, renew, and manage dynamic         certificates for secure device authentication. </p></div></div></div></li><li><div class="topicref" data-id="certificates_add"><div class="title"><a href="../Certificates/add.html">Step One: Integrate Certificate Authority Services</a><div class="wh-tooltip"><p class="shortdesc">Integrate third-party Certificate Authority services in <span class="keyword">SOTI MobiControl</span> to enable automated certificate life-cycle management. Supported services include ACME, 		ADCS, EJBCA, Entrust, SCEP, and Sectigo.</p></div></div></div></li><li class="active"><div class="topicref" data-id="globalsetting_certificate_authorities"><div class="title"><a href="../Certificates/certificate_authorities.html">Certificate Authority Integration Details</a><div class="wh-tooltip"><p class="shortdesc">Use the Certificate Authority dialog box in <span class="keyword">SOTI MobiControl</span> to 		integrate supported CA services—such as ADCS, ACME, EJBCA, Entrust, Sectigo, and 		SCEP.</p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="true"><div data-tocid="concept_tj1_ypv_b3c-d628e505" class="topicref" data-id="concept_tj1_ypv_b3c" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_tj1_ypv_b3c-d628e505-link" class="wh-expand-btn"></span><div class="title"><a href="../improvement_work.html" id="concept_tj1_ypv_b3c-d628e505-link">Improved Existing Documentation</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="system_certificate_authorities-d628e515" class="topicref" data-id="system_certificate_authorities" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action system_certificate_authorities-d628e515-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/certificates_authorities.html" id="system_certificate_authorities-d628e515-link">Managing Certificates</a><div class="wh-tooltip"><p class="shortdesc">Manage and deploy digital certificates in <span class="keyword">SOTI MobiControl</span>, including 		manual uploads and dynamic certificates issued via integrated certificate 		authorities.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="pconfig_security_cert-d628e531" class="topicref" data-id="pconfig_security_cert" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action pconfig_security_cert-d628e531-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/certificates.html" id="pconfig_security_cert-d628e531-link">Deploying Manually Uploaded Certificates</a><div class="wh-tooltip"><p class="shortdesc">Deploy externally sourced certificates to devices using the Certificates profile 		configuration in <span class="keyword">SOTI MobiControl</span>. </p></div></div></div></li><li role="treeitem"><div data-tocid="concept_d2f_tpb_tcc-d628e557" class="topicref" data-id="concept_d2f_tpb_tcc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/using_the_certificates_dashboard.html" id="concept_d2f_tpb_tcc-d628e557-link">Using the Certificates Dashboard</a><div class="wh-tooltip"><p class="shortdesc">The Certificates Dashboard in <span class="keyword">SOTI MobiControl</span> offers a centralized         view and management of all deployed certificates. It features interactive charts, detailed         tables for static and dynamic certificates, advanced filtering, and bulk actions like         renewal and revocation all in one place.</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="concept_nlz_4n2_kfc-d628e573" class="topicref" data-id="concept_nlz_4n2_kfc" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_nlz_4n2_kfc-d628e573-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/deploying_dynamic_certificates_0.html" id="concept_nlz_4n2_kfc-d628e573-link">Deploying Managed (Dynamic) Certificates</a><div class="wh-tooltip"><p class="shortdesc">Use integrated Certificate Authority (CA) services in <span class="keyword">SOTI MobiControl</span> to automatically deploy, renew, and manage dynamic         certificates for secure device authentication. </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="certificates_add-d628e589" class="topicref" data-id="certificates_add" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action certificates_add-d628e589-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/add.html" id="certificates_add-d628e589-link">Step One: Integrate Certificate Authority Services</a><div class="wh-tooltip"><p class="shortdesc">Integrate third-party Certificate Authority services in <span class="keyword">SOTI MobiControl</span> to enable automated certificate life-cycle management. Supported services include ACME, 		ADCS, EJBCA, Entrust, SCEP, and Sectigo.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="globalsetting_certificate_authorities-d628e605" class="topicref" data-id="globalsetting_certificate_authorities" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action globalsetting_certificate_authorities-d628e605-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/certificate_authorities.html" id="globalsetting_certificate_authorities-d628e605-link">Certificate Authority Integration Details</a><div class="wh-tooltip"><p class="shortdesc">Use the Certificate Authority dialog box in <span class="keyword">SOTI MobiControl</span> to 		integrate supported CA services—such as ADCS, ACME, EJBCA, Entrust, Sectigo, and 		SCEP.</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="certificates_issue-d628e621" class="topicref" data-id="certificates_issue" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/issuing.html" id="certificates_issue-d628e621-link">Issuing Enrollment and User Certificates Using ADCS</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="task_q3n_nd2_kfc-d628e631" class="topicref" data-id="task_q3n_nd2_kfc" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action task_q3n_nd2_kfc-d628e631-link" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/deploying_dynamic_certificates.html" id="task_q3n_nd2_kfc-d628e631-link">Step Two: Create a Certificate Template</a><div class="wh-tooltip"><p class="shortdesc">Define templates to issue dynamic certificates using your integrated certificate         authority.</p></div></div></div></li><li role="treeitem"><div data-tocid="task_qmx_mt2_kfc-d628e670" class="topicref" data-id="task_qmx_mt2_kfc" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/deploying_dynamic_certificates_1.html" id="task_qmx_mt2_kfc-d628e670-link">Step Three: Deploy Dynamic Certificates</a><div class="wh-tooltip"><p class="shortdesc">Deploy dynamic certificates to devices using templates and the Certificates         configuration in <span class="keyword">SOTI MobiControl</span>.</p></div></div></div></li></ul></li><li role="treeitem"><div data-tocid="certificates_management-d628e686" class="topicref" data-id="certificates_management" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../Certificates/viewing.html" id="certificates_management-d628e686-link">Managing Certificates on a Device</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="using_signal_policies-d628e696" class="topicref" data-id="using_signal_policies" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action using_signal_policies-d628e696-link" class="wh-expand-btn"></span><div class="title"><a href="../signal/using_signal_policies.html" id="using_signal_policies-d628e696-link">Using Signal Policies</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="start_device_details-d628e876" class="topicref" data-id="start_device_details" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action start_device_details-d628e876-link" class="wh-expand-btn"></span><div class="title"><a href="../Device%20Information/device_information.html" id="start_device_details-d628e876-link">Viewing Device Information</a></div></div></li></ul></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article class="- topic/topic       reference/reference topic reference" role="article" aria-labelledby="ariaid-title1">
+	
+	
+	<h1 class="- topic/title title topictitle1" id="ariaid-title1">Certificate Authority Integration Details</h1>
+	
+
+	<div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc">Use the Certificate Authority dialog box in <span class="- topic/keyword keyword">SOTI MobiControl</span> to
+		integrate supported CA services—such as ADCS, ACME, EJBCA, Entrust, Sectigo, and
+		SCEP.</p>
+
+		<section class="- topic/section section">
+			<p class="- topic/p p">The Certificate Authority feature is used to manage and issue digital certificates to
+				devices for secure communication, authentication, and policy enforcement. It plays a
+				critical role in enterprise mobility management by enabling secure identity
+				verification and encrypted data exchange.</p>
+			<p class="- topic/p p">Use the Certificate Authority dialog box to integrate your certificate authority service and
+				create certificate templates.</p>
+			<p class="- topic/p p"><span class="- topic/keyword keyword">SOTI MobiControl</span> uses certificate templates to issue and maintain dynamic
+				certificates for each user and device.</p>
+			<div class="- topic/p p">You can configure the following certificate authority types: <ul class="- topic/ul ul">
+					<li class="- topic/li li"><a class="- topic/xref xref" href="#globalsetting_certificate_authorities__adcs">Active Directory
+							Certificate Services (ADCS)</a></li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="#globalsetting_certificate_authorities__entrust">Entrust</a></li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="#globalsetting_certificate_authorities__ejbca">Enterprise Java
+							Beans Certificate Authority (EJBCA) </a>)</li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="#globalsetting_certificate_authorities__genericscep">Generic
+							Simple Certificate Enrollment Protocol (SCEP)</a></li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="#globalsetting_certificate_authorities__ACME">Automatic
+							Certificate Management Environment (ACME)</a></li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="certificate_authorities.html#globalsetting_certificate_authorities__sectigo">Sectigo</a></li>
+					<li class="- topic/li li"><a class="- topic/xref xref" href="certificate_authorities.html#globalsetting_certificate_authorities__digicert">DigiCert</a></li>
+				</ul></div>
+		</section>
+
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__common" data-ofbid="globalsetting_certificate_authorities__common"><h2 class="- topic/title title sectiontitle">Common to All Certificates</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" id="globalsetting_certificate_authorities__common_table" data-ofbid="globalsetting_certificate_authorities__common_table" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Name</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter a name for your certificate authority.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Certificate Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select a certificate type. Options are: <ul class="- topic/ul ul">
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">ACME</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">ADCS</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">DigiCert</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">EJBCA</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Entrust</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Generic SCEP</span></li>
+									<li class="- topic/li li"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Sectigo</span></li>
+								</ul></td>
+						</tr>
+					</tbody></table></div>
+		</section>
+
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__adcs" data-ofbid="globalsetting_certificate_authorities__adcs"><h2 class="- topic/title title sectiontitle">ADCS</h2>
+			
+			<p class="- topic/p p">ADCS supports the Public Key Infrastructure (PKI) and SCEP configuration types.</p>
+
+			<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">PKI</strong></p>
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Protocol</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Choose the protocol <span class="- topic/keyword keyword">SOTI MobiControl</span> uses to communicate with the
+								certificate authority. Options are:<ul class="- topic/ul ul">
+									<li class="- topic/li li">HTTPS</li>
+									<li class="- topic/li li">DCOM</li>
+								</ul></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enrollment URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL you received after installing the Certificate Enrollment web
+								service.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Policy URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL you received after installing the Certificate Enrollment Policy web
+								service.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Trusted Root Certificate</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">If the certificate authority has a self-signed certificate, upload the root
+								certificate here. You can browse for the certificate file or drag it
+								into this field.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enrollment Certificate</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the <span class="- topic/ph ph ngui-icon-import"></span> icon to open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add
+									Enrollment Certificate</span> dialog box, where you can
+								choose the enrollment agent certificate. Provide a
+									<span class="+ topic/ph sw-d/filepath ph filepath">*.pfx</span> certificate file and its password
+								when uploading the certificate. <p class="- topic/p p">This certificate signs
+									certificate requests to the ADCS server. It is explicitly
+									trusted to request certificates on behalf of other users, such
+									as the device owner.</p></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Authentication Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">The authentication type to communicate with the certificate authority. Options are: <ul class="- topic/ul ul">
+									<li class="- topic/li li">Certificate</li>
+									<li class="- topic/li li">Username/Password</li>
+									<li class="- topic/li li">Kerberos</li>
+								</ul></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Authentication Credential Certificate</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the <span class="- topic/ph ph ngui-icon-import"></span> icon to open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add
+									Authentication Credential Certificate</span> dialog box,
+								where you can select the certificate file. Provide a
+									<span class="+ topic/ph sw-d/filepath ph filepath">*.pfx</span> certificate file and its password
+								when uploading the certificate. <div class="- topic/note note note note_note"><span class="note__title">Note:</span> Available when
+										<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Certificate</span> is the selected
+									authentication type.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Username</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">The username of the account used to communicate with the certificate authority.
+									<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Available when <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Username/Password</span> is
+									the selected authentication type.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Password</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">The password of the account used to communicate with the certificate authority.
+									<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Available when <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Username/Password</span> is
+									the selected authentication type.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Cloud Link Agent</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the client certificate you use to authenticate to <span class="- topic/keyword keyword">SOTI Cloud Link</span>. <div class="- topic/note note note note_note"><span class="note__title">Note:</span> This option applies to <span class="- topic/keyword keyword">SOTI MobiControl</span> Cloud customers.</div></td>
+						</tr>
+					</tbody></table></div>
+
+			<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">SCEP</strong></p>
+			<div class="- topic/note note note note_note"><span class="note__title">Note:</span> iOS devices can request SCEP certificates natively. For other devices, <span class="- topic/keyword keyword">SOTI MobiControl</span> makes the request to the SCEP server on the device's behalf and then pushes the SCEP certificate to the device.</div>
+			<div class="- topic/note note caution note_caution"><span class="note__title">CAUTION:</span> Be sure to select an authentication method suitable for your requirements.
+					<span class="- topic/ph ph">SOTI</span> recommends Windows Authentication over basic
+				authentication for better security.</div>
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Use SCEP Client</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">This option enables or disables <span class="- topic/keyword keyword">SOTI MobiControl</span>'s built-in SCEP
+								client. If enabled, the <span class="- topic/keyword keyword">SOTI MobiControl</span> server
+								acts as the client when requesting certificates for devices using
+								SCEP. If you disable this option, <span class="- topic/keyword keyword">SOTI MobiControl</span>
+								assumes your device can request SCEP certificates natively. For
+								example, iOS and Windows Modern.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL received after installing the Certification Authority Web Enrollment role service.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Use Static Challenge</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enable to use a static challenge when devices request new certificates. When you
+								disable this option, <span class="- topic/keyword keyword">SOTI MobiControl</span> issues a new
+								dynamic challenge each time a device requests a certificate. </td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Challenge URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL received after installing the Network Device Enrollment role service.
+									<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Applies if you disable <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Use Static
+										Challenge</span>. </div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Static Challenge</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the Static Challenge key here.<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Applies if you enable <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Use Static
+										Challenge</span>.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Thumbprint</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the thumbprint for your certificate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Username</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the username of the account used to communicate with the certificate
+								authority.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Password</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the password of the account used to communicate with the certificate
+								authority.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Retries</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the number of times a device attempts to obtain a certificate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Retry Delay</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the timeout delay between the retries.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Cloud Link Agent</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the <span class="- topic/ph ph">Cloud Link Agent</span> that enables communication between <span class="- topic/ph ph">SOTI MobiControl</span> and the target certificate authority
+								server. <div class="- topic/note note note note_note"><span class="note__title">Note:</span> This option applies to <span class="- topic/keyword keyword">SOTI MobiControl</span> Cloud customers.</div></td>
+						</tr>
+					</tbody></table></div>
+		</section>
+
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__entrust" data-ofbid="globalsetting_certificate_authorities__entrust"><h2 class="- topic/title title sectiontitle">Entrust</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Configuration Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Displays the configuration type: PKI.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL provided by Entrust for certification services.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Username</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the username used to authenticate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Password</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the password used to authenticate.</td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__ejbca" data-ofbid="globalsetting_certificate_authorities__ejbca"><h2 class="- topic/title title sectiontitle">EJBCA</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Configuration Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Displays the configuration type: Enter the Enrollment over Secure Transport
+								(EST).</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Alias</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the EST alias name created in EJBCA.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL of the certificate authority services.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Authentication Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select an authentication type to match what you provided in EJBCA when setting up your
+								EST alias. Options are:<ul class="- topic/ul ul" id="globalsetting_certificate_authorities__ul_ipx_m2m_xwb" data-ofbid="globalsetting_certificate_authorities__ul_ipx_m2m_xwb">
+									<li class="- topic/li li">Username/Password</li>
+									<li class="- topic/li li">Certificate</li>
+									<li class="- topic/li li">Both</li>
+								</ul></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Username</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the user name used to authenticate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Password</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the password used to authenticate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Authentication Credential Certificate</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the <span class="- topic/ph ph ngui-icon-import"></span> icon to open the <span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add
+									Authentication Credential Certificate</span> dialog box.
+								Upload a <span class="+ topic/ph sw-d/filepath ph filepath">*.p12</span> certificate file and its
+								password. <div class="- topic/note note note note_note" id="globalsetting_certificate_authorities__note_o3m_b2m_xwb" data-ofbid="globalsetting_certificate_authorities__note_o3m_b2m_xwb"><span class="note__title">Note:</span> Available when
+										<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Certificate</span> or
+										<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Both</span> is the selected Authentication
+									Type.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Cloud Link Agent</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Select the client certificate you use to authenticate to <span class="- topic/keyword keyword">SOTI Cloud Link</span>. <div class="- topic/note note note note_note" id="globalsetting_certificate_authorities__note_r51_dfm_xwb" data-ofbid="globalsetting_certificate_authorities__note_r51_dfm_xwb"><span class="note__title">Note:</span> This
+									option applies to <span class="- topic/keyword keyword">SOTI MobiControl</span> Cloud
+									customers.</div></td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__genericscep" data-ofbid="globalsetting_certificate_authorities__genericscep"><h2 class="- topic/title title sectiontitle">Generic SCEP</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL of the certificate authority services.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Use Static Challenge</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Turn on to use a static challenge when devices request new certificates. When you
+								disable this option, <span class="- topic/keyword keyword">SOTI MobiControl</span> issues a new
+								challenge every time a device requests a certificate.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Static Challenge</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the static challenge key. You must use a static challenge when you are issuing
+								certificates to more than one device. <div class="- topic/note note note note_note"><span class="note__title">Note:</span> Applies if you enable
+										<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Use Static Challenge</span>.</div></td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Use SCEP Client</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Turn on to make your certificate authority use an SCEP client.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Thumbprint</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the thumbprint of the Public Key Root Certificate from the
+								Certificate Authority (CA).</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Retries</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the number of attempts a device can make to get a certificate from the SCEP server.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Retry Delay</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the timeout delay between retries.</td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__ACME" data-ofbid="globalsetting_certificate_authorities__ACME"><h2 class="- topic/title title sectiontitle">ACME</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL of the certificate authority services.</td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__sectigo" data-ofbid="globalsetting_certificate_authorities__sectigo"><h2 class="- topic/title title sectiontitle">Sectigo</h2>
+			
+			<div class="table-container"><table class="- topic/table table dialogtable" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Configuration type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Representational State Transfer (REST) (default).</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the URL of the certificate authority services.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Client Id</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the Client ID of the account used to communicate with
+								Sectigo Certificate Manager.</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0">Client Secret</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0">Enter the Client Secret of the account used to communicate with
+								Sectigo Certificate Manager.</td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		<section class="- topic/section section" id="globalsetting_certificate_authorities__digicert" data-ofbid="globalsetting_certificate_authorities__digicert"><h2 class="- topic/title title sectiontitle">DigiCert</h2>
+			
+			<div class="table-container"><table class="- topic/table table frame-all" id="globalsetting_certificate_authorities__table_digicert_config" data-ofbid="globalsetting_certificate_authorities__table_digicert_config" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+						<tr class="- topic/row">
+							<th class="- topic/entry entry colsep-0 rowsep-0" id="globalsetting_certificate_authorities__table_digicert_config__entry__1">Field</th>
+							<th class="- topic/entry entry colsep-0 rowsep-0" id="globalsetting_certificate_authorities__table_digicert_config__entry__2">Description</th>
+						</tr>
+					</thead><tbody class="- topic/tbody tbody">
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__1">Configuration Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__2">
+								<p class="- topic/p p">Select the configuration type. Representational State Transfer (REST) is selected by default.</p>
+							</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__1">Service URL</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__2">
+								<p class="- topic/p p">Enter the URL of the DigiCert Trust Lifecycle Manager certificate services.</p>
+							</td>
+						</tr>
+						<tr class="- topic/row">
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__1">Authentication Type</td>
+							<td class="- topic/entry entry colsep-0 rowsep-0" headers="globalsetting_certificate_authorities__table_digicert_config__entry__2">
+								<p class="- topic/p p">Select how <span class="- topic/ph ph">SOTI</span> authenticates to DigiCert Trust Lifecycle Manager:</p>
+								<ul class="- topic/ul ul" id="globalsetting_certificate_authorities__ul_dqh_12n_khc" data-ofbid="globalsetting_certificate_authorities__ul_dqh_12n_khc">
+									<li class="- topic/li li">
+										<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">API Key</strong>: Use an API key to authenticate requests.</p>
+									</li>
+									<li class="- topic/li li">
+										<p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Certificate</strong>: Use a client certificate to authenticate requests.</p>
+										<div class="- topic/note note note note_note" id="globalsetting_certificate_authorities__note_okc_m2n_khc" data-ofbid="globalsetting_certificate_authorities__note_okc_m2n_khc"><span class="note__title">Note:</span> 
+											Select the <span class="- topic/ph ph ngui-icon-import"></span> icon to open the
+											<span class="+ topic/keyword ui-d/wintitle keyword wintitle">Add Authentication Credential Certificate</span> dialog box, then upload a
+											<span class="+ topic/ph sw-d/filepath ph filepath">*.p12</span> certificate file and enter its password.
+										</div>
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody></table></div>
+		</section>
+		
+
+	</div>
+	
+
+</article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo" xml:lang="en" lang="en"><strong>Related information</strong><ul class="linklist related_link"><li class="linklist"><a class="- topic/link link navheader_parent_path" href="add.html" title="Integrate third-party Certificate Authority services in SOTI MobiControl to enable automated certificate life-cycle management. Supported services include ACME, ADCS, EJBCA, Entrust, SCEP, and Sectigo.">Step One: Integrate Certificate Authority Services</a></li><li class="linklist"><a class="- topic/link link navheader_parent_path" href="../improvement_work.html" title="Improved Existing Documentation">Improved Existing Documentation</a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__common" data-tocid="globalsetting_certificate_authorities__common">Common to All Certificates</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__adcs" data-tocid="globalsetting_certificate_authorities__adcs">ADCS</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__entrust" data-tocid="globalsetting_certificate_authorities__entrust">Entrust</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__ejbca" data-tocid="globalsetting_certificate_authorities__ejbca">EJBCA</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__genericscep" data-tocid="globalsetting_certificate_authorities__genericscep">Generic SCEP</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__ACME" data-tocid="globalsetting_certificate_authorities__ACME">ACME</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__sectigo" data-tocid="globalsetting_certificate_authorities__sectigo">Sectigo</a></div></li><li class="section-item"><div class="section-title"><a href="#globalsetting_certificate_authorities__digicert" data-tocid="globalsetting_certificate_authorities__digicert">DigiCert</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div>Generated by <a class="oxyFooter" href="http://www.oxygenxml.com/xml_webhelp.html" target="_blank">
+ &lt;oXygen/&gt; XML WebHelp
+ </a></div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
