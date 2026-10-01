@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Docs Peer Review"
+  short_description: "Review technical docs with clear, actionable findings."
+  default_prompt: "Use $technical-docs-peer-review to review these documentation changes and explain the main findings."

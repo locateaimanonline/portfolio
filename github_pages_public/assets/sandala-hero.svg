@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1620">
+  <title>Mathematical Sandala Outer Silhouette - Round Bottom</title>
+  <path d="M 500 55
+    C 555 95 700 215 778 330
+    C 835 422 846 515 820 610
+    C 797 694 758 760 738 835
+    C 721 900 716 968 721 1035
+    C 727 1108 752 1180 800 1258
+    L 855 1345
+    C 775 1430 650 1535 500 1560
+    C 350 1535 225 1430 145 1345
+    L 200 1258
+    C 248 1180 273 1108 279 1035
+    C 284 968 279 900 262 835
+    C 242 760 203 694 180 610
+    C 154 515 165 422 222 330
+    C 300 215 445 95 500 55 Z"
+    fill="none" stroke="#9ce2d5" stroke-width="28"
+    stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

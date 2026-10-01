@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081522"><meta name="description" content="Aiman Nabeel · AI-first technical writer and subject matter expert"><title>REST API: authentication and request walkthrough · Aiman Nabeel</title><link rel="stylesheet" href="../../site-assets/styles.css?v=41256b4f7e"><script defer src="../../site-assets/search-index.js?v=fc059b637b"></script><script defer src="../../site-assets/site.js?v=17de298f8a"></script><style>*{box-sizing:border-box}body{margin:0;background:#f4f5f7;color:#192635;font:16px/1.65 "Segoe UI",Arial,sans-serif}main{max-width:1440px;margin:auto;padding:36px 5vw 64px}header{background:#142a42;color:white;padding:40px 5vw}header>div{max-width:1296px;margin:auto}h1{font-size:clamp(28px,3vw,42px);line-height:1.2;margin:8px 0 16px}h2{font-size:24px;line-height:1.3}h3{font-size:19px}p{max-width:95ch}a{color:#15599b}header a{color:#d8eaff}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:700}.muted{color:#586778}.intro{font-size:19px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.card{background:white;border:1px solid #d4dce5;border-radius:12px;padding:26px}.card h2{margin-top:8px}.tag{font-size:13px;color:#33516d}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.sheet{background:white;border:1px solid #d4dce5;padding:26px;border-radius:10px;min-width:0}.sheet h1{font-size:25px;color:#193d60}.sheet h2{font-size:21px}.screenshot{margin:20px 0}.screenshot img{max-width:100%;height:auto;max-height:520px;object-fit:contain;border:1px solid #d5dce4}.screenshot figcaption{font-size:12px;color:#5d6b7a;line-height:1.5}.notice{background:#edf1f5;padding:14px 18px;font-size:14px;overflow-wrap:anywhere}.stats{display:flex;flex-wrap:wrap;gap:14px;margin:20px 0}.stats span{padding:9px 14px;background:#e7edf3;border-radius:6px}details{background:white;border:1px solid #d4dce5;padding:18px 24px;margin:20px 0;border-radius:9px}summary{cursor:pointer;font-weight:600}code{font:13px/1.5 Consolas,monospace;overflow-wrap:anywhere}.provenance{font-size:13px;overflow-wrap:anywhere}.dita-table{border-collapse:collapse;width:100%;font-size:14px}.dita-table td,.dita-table th{border:1px solid #c7d1db;padding:8px;vertical-align:top}.xref{color:#245e91}.note{background:#edf4fa;padding:12px 16px;border-left:3px solid #4f7395}.stepresult{margin:12px 0}.review-comment{padding:14px;background:#fff4d8;border-left:4px solid #bb7b17}.review-meta{font-size:12px;font-weight:600}.review-pin,.review-anchor{background:#ffe6a3}.added-block,ins{background:#e4f2e9;border-left:3px solid #598766;padding:8px;text-decoration:none}.deleted-block,del{background:#f7e9e9;border-left:3px solid #b57474;padding:8px}.deleted-block{text-decoration:line-through}.icon-token{font-size:12px;color:#4a6380}.parse-error{background:#fff0e0;padding:16px}pre{white-space:pre-wrap;overflow-wrap:anywhere}input{width:min(100%,560px);padding:12px 16px;font:inherit;border:1px solid #bac8d5;border-radius:6px;margin-bottom:24px}.switches button{font:inherit;background:#fff;border:1px solid #b6c7d7;border-radius:6px;padding:8px 14px;cursor:pointer;margin:0 8px 16px 0}.single .sheet{max-width:980px}.single .pair{grid-template-columns:1fr}@media(max-width:850px){.cards,.pair{grid-template-columns:1fr}main{padding:24px 18px}.sheet{padding:18px}header{padding:28px 20px}}body{overflow-wrap:anywhere}.sheet>*,details>*{max-width:100%}.sheet ul,.sheet ol{padding-left:24px}.dita-table{table-layout:fixed}.sheet pre{min-width:0}.substeps{list-style-type:lower-alpha;padding-left:28px;margin:10px 0}.substeps>li{padding-left:4px;margin:8px 0}.source-icon{display:inline-block;vertical-align:-.1em;font-size:1.1em;color:#183f60;margin:0 .16em}@font-face{font-family:PortfolioIcoMoon;src:url("assets/icomoon.woff") format("woff");font-display:block}.source-icon:before{font-family:PortfolioIcoMoon!important;font-weight:normal;font-style:normal;line-height:1}.ngui-icon-addnew:before{content:"\e901"}.ngui-icon-addpackage:before{content:"\e933"}.ngui-icon-delete:before{content:"\e904"}.ngui-icon-device:before{content:"\e9aa"}.ngui-icon-import:before{content:"\ea7d"}.ngui-icon-moreitem:before{content:"\e924"}header .eyebrow{font:italic 20px Georgia,"Times New Roman",serif;text-transform:none;letter-spacing:0;color:#b5e6db}.card .tag{font:italic 16px Georgia,"Times New Roman",serif}.sheet .xref{font-weight:600}.site-header{padding:0}.site-header .header-inner{max-width:none}.preview-breadcrumb{display:flex;align-items:center;gap:10px;margin:0 0 28px;padding:12px 0;border-bottom:1px solid #ccd9e2;font-size:14px;color:#58707c}.preview-breadcrumb a{color:#196b75;font-weight:700}.preview-breadcrumb span:last-child{color:#274a5f}.preview-main{padding-top:25px}</style></head><body data-root="../../"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner">
+      <a class="brand" href="../../index.html" aria-label="Aiman Nabeel, home"><span class="brand-name">Aiman Nabeel</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="../../index.html">Home</a><a href="../../projects/index.html">Projects</a><a class="nav-story" href="../../chapters/index.html"><span>Story</span><small class="nav-story-786" aria-hidden="true">786</small></a><a href="../../evidence/index.html" aria-current="page">Writing</a><a href="../../skills/index.html">Skills</a><a href="../../contact/index.html">Contact</a></nav>
+      <div class="header-actions"><button class="search-trigger" type="button" data-search-open aria-label="Search the portfolio"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><span>Search</span><kbd>/</kbd></button><a class="resume-download" href="../../assets/Aiman_Nabeel_Recruiter_Resume.pdf" download="Aiman_Nabeel_Recruiter_Resume.pdf" aria-label="Download Aiman Nabeel résumé as PDF"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"></path></svg><span>Download PDF</span></a><button class="menu-trigger" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><span></span><span></span></button></div>
+      <nav class="mobile-nav" aria-label="Mobile navigation" id="mobile-menu"><a href="../../index.html">Home</a><a href="../../projects/index.html">Projects</a><a class="nav-story" href="../../chapters/index.html"><span>Story</span><small class="nav-story-786" aria-hidden="true">786</small></a><a href="../../evidence/index.html" aria-current="page">Writing</a><a href="../../skills/index.html">Skills</a><a href="../../contact/index.html">Contact</a></nav>
+    </div></header><div class="progress-bar" id="reading-progress" aria-hidden="true"></div><header><div><div class="eyebrow">Aiman Nabeel · Improvements</div><h1>REST API: authentication and request walkthrough</h1><p class="intro">A traceable example of the work, with its original review or drafting stage preserved.</p></div></header><main id="main" class="preview-main"><nav class="preview-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Writing</a><span aria-hidden="true">›</span><span>REST API: authentication and request walkthrough</span></nav>
+<p class="tag">Technical explanation · 2026-03-06 · trunk</p>
+<p>A two-command entry point became an eight-command API portal walkthrough covering permissions, OAuth, request parameters, execution and responses, with nine image elements.</p>
+<div class="stats"><span>Root: task → task</span><span>Command elements: 2 → 8</span><span>Image elements: 0 → 9</span></div>
+<p class="muted">Counts describe source structure, including commands in substeps. More elements do not by themselves prove better usability.</p>
+<div class="switches"><button onclick="document.body.classList.remove('single')">Side by side</button><button onclick="document.body.classList.add('single')">Stacked reading</button></div>
+<div class="pair"><section class="sheet"><h2>Before · parent revision</h2><h1>Using the SOTI MobiControl REST API</h1><section><h2>About this task</h2>
+			<p>Integrate SOTI MobiControl into your enterprise mobility workflow
+				or partner applications using our RESTful web service API. SOTI MobiControl provides an interactive environment where you can
+				experiment with the REST API.</p>
+			<p>To get to your interactive REST API environment:</p>
+		</section><section><h2>Procedure</h2><ol class="steps"><li><div class="step-block"><div class="cmd">Log into your SOTI MobiControl console.</div></div></li><li><div class="step-block"><div class="cmd">In the address bar of the web browser, replace everything after
+						<code>MobiControl/</code> with <code>api</code> and go to
+					the new web page.</div>For example, change
+						<code>https://soti.sotidemo.com/MobiControl/WebConsole/home/devices</code>
+					to <code>https://soti.sotidemo.com/MobiControl/api</code>.</div></li></ol></section><section><h2>Result</h2>
+			<p>You have entered the interactive environment of the SOTI MobiControl REST API service. Detailed documentation on the available APIs is available
+				directly within the API reference.</p>
+			<aside class="note note-warning"><strong>Warning:</strong> API calls sent from this page are executed against your SOTI MobiControl environment. Exercise extreme caution when executing
+				each API call against a production environment.</aside>
+			<p>The syntax for filtering expressions differs between <code><code>GET
+						/devices/search</code></code> and <code><code>GET
+						/devices</code></code> endpoints. </p>
+			<p>Use <span class="xref" title="Referenced topic in the historical help">advanced search</span>
+				expressions for <code><code>GET /devices/search</code></code>. For
+				example, use
+						<code><code>filter=BatteryStatus%3E38%20AND%20CellularCarrier%3D%27Communications%20Network%27</code></code>
+				to find devices with battery statuses greater than 35% <strong>AND</strong> whose cellular
+				carrier has a name containing the terms "Communications Network".</p>
+			<p>Use name value pairs for <code><code>GET /devices</code></code>. For
+				example, use <code><code>{Family}:{Linux},
+					{IsAgentOnline}:{TRUE}</code></code> to find Linux devices whose agents are
+				online.</p>
+		</section><section class="related"><h2>Related information</h2><ul><li><span class="xref">API Clients</span></li></ul></section></section><section class="sheet"><h2>After · committed revision</h2><h1>Access and Use the SOTI MobiControl API Documentation Portal</h1><section><h2>Before you begin</h2> You must have: <ul><li>Manage API clients permission. See <span class="xref" title="Referenced topic in the historical help">General Permissions</span>. </li></ul><ul><li>The Allow Access to API Documentation option enabled. See <span class="xref" title="Referenced topic in the historical help">Managing API Clients</span>.</li></ul></section><section><h2>About this task</h2>The SOTI MobiControl API documentation portal provides an interactive
+			environment where administrators and developers can explore, test, and validate
+			Representational State Transfer (REST) API endpoints. They can use these endpoints to
+			integrate SOTI MobiControl with enterprise mobility workflows or
+			external applications.<p>The documentation portal presents APIs in a structured
+				interface that makes it easier to discover endpoints, review request parameters, and
+				understand response formats. APIs are organized into categorized sections such as
+				authentication, agents, client operations, and configuration APIs, allowing
+				developers to quickly locate the endpoints relevant to their integration
+				tasks.</p><p>Each endpoint includes an introduction describing what the API returns,
+				along with a request section where you can specify required parameters. After the
+				parameters are entered, the portal automatically generates the REST request syntax
+				that can be copied or executed directly from the interface. </p>
+			<p>The documentation interface includes:</p>
+			<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/updated_swagger.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/updated_swagger.png" alt="API documentation portal displaying categorized API navigation and endpoint details."></a><figcaption>API documentation portal displaying categorized API navigation and endpoint details.</figcaption></figure>
+			<ol><li>Search and advanced search capabilities to quickly locate APIs.</li><li>A categorized navigation panel that organizes APIs into logical sections.</li><li>Detailed endpoint information including request parameters and response
+					schemas.</li></ol><aside class="note note-warning"><strong>Warning:</strong>  API calls executed from the
+				documentation portal are sent directly to your SOTI MobiControl
+				environment. Exercise caution when executing requests in production environments.
+			</aside></section><section><h2>Procedure</h2><ol class="steps"><li><div class="step-block"><div class="cmd">Log in to your SOTI MobiControl web console.</div></div></li><li><div class="step-block"><div class="cmd">In the browser address bar, replace everything after
+						<code>MobiControl/</code> with <code>api</code>. </div> For example, change
+					https://soti.sotidemo.com/MobiControl/WebConsole/home/devices to
+					https://soti.sotidemo.com/MobiControl/api <div class="stepresult"><span>Result:</span>  The SOTI MobiControl API documentation portal opens.
+				</div></div></li><li><div class="step-block"><div class="cmd">Use the navigation panel on the left to browse API categories or use the search
+					bar to locate a specific API endpoint.</div></div></li><li><div class="step-block"><div class="cmd">Select an API endpoint to view its introduction, request parameters, schema,
+					and response details.</div></div></li><li><div class="step-block"><div class="cmd">Select the <strong>OAuth (oauth2)</strong> lock
+					icon to authenticate before executing API requests if required.</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/oauth_for_api.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/oauth_for_api.png" alt="Selecting the OAuth lock icon."></a><figcaption>Selecting the OAuth lock icon.</figcaption></figure>
+					</figure>
+				</div><div class="stepresult"><span>Result:</span>  This opens an authentication page. Enter your Client ID and Client
+					Secret to get the authentication token required by selecting <strong>Get
+						Token</strong>.<p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/get_token.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/get_token.png" alt="Retrieving a token for authentication."></a><figcaption>Retrieving a token for authentication.</figcaption></figure>
+						</figure>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">In the <strong>Request</strong> section, enter the required path
+					parameters. Mandatory parameters are marked with an asterisk (*).</div><div class="stepresult"><span>Result:</span>  The documentation portal automatically generates the REST API request
+					syntax based on the parameters entered. The generated request displays the HTTP
+					method, endpoint URL, and required headers.<p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/path_parameters_for_api.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/path_parameters_for_api.png" alt="Specifying the path parameters."></a><figcaption>Specifying the path parameters.</figcaption></figure>
+						</figure>
+						<aside class="note note-tip"><strong>Tip:</strong> You can use the
+								<strong>Copy</strong> command to use in external API tools or
+								scripts.<figure>
+								<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/copying_request_information.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/copying_request_information.png" alt="Copying the request information."></a><figcaption>Copying the request information.</figcaption></figure>
+							</figure></aside>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">Test the request directly from the documentation portal
+					by selecting <strong>Try</strong>.</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/trying_an_api_request.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/trying_an_api_request.png" alt="Trying the generated API command."></a><figcaption>Trying the generated API command.</figcaption></figure>
+					</figure>
+				</div><div class="stepresult"><span>Result:</span>  If the request is executed, the response is displayed in the portal.
+					Review the results of the request. The portal displays the API response in the
+					following sections: <ul><li>Response: Shows the returned payload from the API. </li><li>Response Headers: Displays HTTP headers returned by the server.</li></ul><p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/api_response.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/api_response.png" alt="Reviewing the API response."></a><figcaption>Reviewing the API response.</figcaption></figure>
+						</figure>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">Scroll down to the <strong>Response</strong> section to find the response
+					codes for the API command along with its example and schema.</div><div class="info">
+					<ul><li>200: Success. </li><li>400: Contract validation failed. </li><li>401: Unauthorized access. </li><li>403: Forbidden.</li></ul>
+				</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/response_codes.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/response_codes.png" alt="Reviewing response codes."></a><figcaption>Reviewing response codes.</figcaption></figure>
+						<aside class="note note-tip"><strong>Tip:</strong> You can switch formats for the
+							example response using the drop-down on the right-hand side.<figure>
+								<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/switching_response_example_format.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/switching_response_example_format.png" alt="Switching the format of an example response."></a><figcaption>Switching the format of an example response.</figcaption></figure>
+							</figure></aside>
+					</figure>
+				</div></div></li></ol></section><section><h2>Result</h2>You have accessed the SOTI MobiControl API documentation portal and can
+			browse available APIs, review endpoint details, generate REST requests, and test API
+			calls directly from the documentation interface. The response results displayed after
+			execution help validate request parameters and troubleshoot integration
+			workflows.</section><section class="related"><h2>Related information</h2><ul><li><span class="xref">Managing API Clients</span></li></ul></section></section></div>
+<details><summary>Highlighted changes</summary><p>Green marks additions; red marks removals. Historical review comments are shown in amber. Colour is also supported by placement and strike-through.</p><div class="deleted-block"><h1>Using the SOTI MobiControl REST API</h1></div><div class="deleted-block"><section><h2>About this task</h2>
+			<p>Integrate SOTI MobiControl into your enterprise mobility workflow
+				or partner applications using our RESTful web service API. SOTI MobiControl provides an interactive environment where you can
+				experiment with the REST API.</p>
+			<p>To get to your interactive REST API environment:</p>
+		</section></div><div class="deleted-block"><section><h2>Procedure</h2><ol class="steps"><li><div class="step-block"><div class="cmd">Log into your SOTI MobiControl console.</div></div></li><li><div class="step-block"><div class="cmd">In the address bar of the web browser, replace everything after
+						<code>MobiControl/</code> with <code>api</code> and go to
+					the new web page.</div>For example, change
+						<code>https://soti.sotidemo.com/MobiControl/WebConsole/home/devices</code>
+					to <code>https://soti.sotidemo.com/MobiControl/api</code>.</div></li></ol></section></div><div class="deleted-block"><section><h2>Result</h2>
+			<p>You have entered the interactive environment of the SOTI MobiControl REST API service. Detailed documentation on the available APIs is available
+				directly within the API reference.</p>
+			<aside class="note note-warning"><strong>Warning:</strong> API calls sent from this page are executed against your SOTI MobiControl environment. Exercise extreme caution when executing
+				each API call against a production environment.</aside>
+			<p>The syntax for filtering expressions differs between <code><code>GET
+						/devices/search</code></code> and <code><code>GET
+						/devices</code></code> endpoints. </p>
+			<p>Use <span class="xref" title="Referenced topic in the historical help">advanced search</span>
+				expressions for <code><code>GET /devices/search</code></code>. For
+				example, use
+						<code><code>filter=BatteryStatus%3E38%20AND%20CellularCarrier%3D%27Communications%20Network%27</code></code>
+				to find devices with battery statuses greater than 35% <strong>AND</strong> whose cellular
+				carrier has a name containing the terms "Communications Network".</p>
+			<p>Use name value pairs for <code><code>GET /devices</code></code>. For
+				example, use <code><code>{Family}:{Linux},
+					{IsAgentOnline}:{TRUE}</code></code> to find Linux devices whose agents are
+				online.</p>
+		</section></div><div class="added-block"><h1>Access and Use the SOTI MobiControl API Documentation Portal</h1></div><div class="added-block"><section><h2>Before you begin</h2> You must have: <ul><li>Manage API clients permission. See <span class="xref" title="Referenced topic in the historical help">General Permissions</span>. </li></ul><ul><li>The Allow Access to API Documentation option enabled. See <span class="xref" title="Referenced topic in the historical help">Managing API Clients</span>.</li></ul></section></div><div class="added-block"><section><h2>About this task</h2>The SOTI MobiControl API documentation portal provides an interactive
+			environment where administrators and developers can explore, test, and validate
+			Representational State Transfer (REST) API endpoints. They can use these endpoints to
+			integrate SOTI MobiControl with enterprise mobility workflows or
+			external applications.<p>The documentation portal presents APIs in a structured
+				interface that makes it easier to discover endpoints, review request parameters, and
+				understand response formats. APIs are organized into categorized sections such as
+				authentication, agents, client operations, and configuration APIs, allowing
+				developers to quickly locate the endpoints relevant to their integration
+				tasks.</p><p>Each endpoint includes an introduction describing what the API returns,
+				along with a request section where you can specify required parameters. After the
+				parameters are entered, the portal automatically generates the REST request syntax
+				that can be copied or executed directly from the interface. </p>
+			<p>The documentation interface includes:</p>
+			<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/updated_swagger.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/updated_swagger.png" alt="API documentation portal displaying categorized API navigation and endpoint details."></a><figcaption>API documentation portal displaying categorized API navigation and endpoint details.</figcaption></figure>
+			<ol><li>Search and advanced search capabilities to quickly locate APIs.</li><li>A categorized navigation panel that organizes APIs into logical sections.</li><li>Detailed endpoint information including request parameters and response
+					schemas.</li></ol><aside class="note note-warning"><strong>Warning:</strong>  API calls executed from the
+				documentation portal are sent directly to your SOTI MobiControl
+				environment. Exercise caution when executing requests in production environments.
+			</aside></section></div><div class="added-block"><section><h2>Procedure</h2><ol class="steps"><li><div class="step-block"><div class="cmd">Log in to your SOTI MobiControl web console.</div></div></li><li><div class="step-block"><div class="cmd">In the browser address bar, replace everything after
+						<code>MobiControl/</code> with <code>api</code>. </div> For example, change
+					https://soti.sotidemo.com/MobiControl/WebConsole/home/devices to
+					https://soti.sotidemo.com/MobiControl/api <div class="stepresult"><span>Result:</span>  The SOTI MobiControl API documentation portal opens.
+				</div></div></li><li><div class="step-block"><div class="cmd">Use the navigation panel on the left to browse API categories or use the search
+					bar to locate a specific API endpoint.</div></div></li><li><div class="step-block"><div class="cmd">Select an API endpoint to view its introduction, request parameters, schema,
+					and response details.</div></div></li><li><div class="step-block"><div class="cmd">Select the <strong>OAuth (oauth2)</strong> lock
+					icon to authenticate before executing API requests if required.</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/oauth_for_api.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/oauth_for_api.png" alt="Selecting the OAuth lock icon."></a><figcaption>Selecting the OAuth lock icon.</figcaption></figure>
+					</figure>
+				</div><div class="stepresult"><span>Result:</span>  This opens an authentication page. Enter your Client ID and Client
+					Secret to get the authentication token required by selecting <strong>Get
+						Token</strong>.<p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/get_token.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/get_token.png" alt="Retrieving a token for authentication."></a><figcaption>Retrieving a token for authentication.</figcaption></figure>
+						</figure>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">In the <strong>Request</strong> section, enter the required path
+					parameters. Mandatory parameters are marked with an asterisk (*).</div><div class="stepresult"><span>Result:</span>  The documentation portal automatically generates the REST API request
+					syntax based on the parameters entered. The generated request displays the HTTP
+					method, endpoint URL, and required headers.<p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/path_parameters_for_api.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/path_parameters_for_api.png" alt="Specifying the path parameters."></a><figcaption>Specifying the path parameters.</figcaption></figure>
+						</figure>
+						<aside class="note note-tip"><strong>Tip:</strong> You can use the
+								<strong>Copy</strong> command to use in external API tools or
+								scripts.<figure>
+								<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/copying_request_information.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/copying_request_information.png" alt="Copying the request information."></a><figcaption>Copying the request information.</figcaption></figure>
+							</figure></aside>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">Test the request directly from the documentation portal
+					by selecting <strong>Try</strong>.</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/trying_an_api_request.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/trying_an_api_request.png" alt="Trying the generated API command."></a><figcaption>Trying the generated API command.</figcaption></figure>
+					</figure>
+				</div><div class="stepresult"><span>Result:</span>  If the request is executed, the response is displayed in the portal.
+					Review the results of the request. The portal displays the API response in the
+					following sections: <ul><li>Response: Shows the returned payload from the API. </li><li>Response Headers: Displays HTTP headers returned by the server.</li></ul><p>
+						<figure>
+							<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/api_response.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/api_response.png" alt="Reviewing the API response."></a><figcaption>Reviewing the API response.</figcaption></figure>
+						</figure>
+					</p></div></div></li><li><div class="step-block"><div class="cmd">Scroll down to the <strong>Response</strong> section to find the response
+					codes for the API command along with its example and schema.</div><div class="info">
+					<ul><li>200: Success. </li><li>400: Contract validation failed. </li><li>401: Unauthorized access. </li><li>403: Forbidden.</li></ul>
+				</div><div class="info">
+					<figure>
+						<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/response_codes.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/response_codes.png" alt="Reviewing response codes."></a><figcaption>Reviewing response codes.</figcaption></figure>
+						<aside class="note note-tip"><strong>Tip:</strong> You can switch formats for the
+							example response using the drop-down on the right-hand side.<figure>
+								<figure class="screenshot"><a href="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/switching_response_example_format.png" target="_blank"><img loading="lazy" src="../examples/G07/after/MobiControl/trunk/source/en/media/images/screencaptures/switching_response_example_format.png" alt="Switching the format of an example response."></a><figcaption>Switching the format of an example response.</figcaption></figure>
+							</figure></aside>
+					</figure>
+				</div></div></li></ol></section></div><div class="added-block"><section><h2>Result</h2>You have accessed the SOTI MobiControl API documentation portal and can
+			browse available APIs, review endpoint details, generate REST requests, and test API
+			calls directly from the documentation interface. The response results displayed after
+			execution help validate request parameters and troubleshoot integration
+			workflows.</section></div><section class="related"><h2>Related information</h2><ul><li><span class="xref">Managing API Clients</span></li></ul></section></details>
+<p class="muted">WYSIWYG-style approximation using the SOTI diff renderer. This is not an Oxygen/DITA-OT build or a live help page. Keyrefs, conrefs, conditional content and related-link navigation may require the original publishing environment. Screenshots are extracted from the matching revision.</p></main><footer class="site-footer"><div><a class="footer-brand" href="../../index.html">Aiman Nabeel<span>.</span></a><p>AI-first technical writing grounded in product evidence, useful guidance, and shared practice.</p></div><div class="footer-links"><a href="../../projects/index.html">Projects</a><a href="../../chapters/index.html">Story</a><a href="../../evidence/index.html">Writing</a><a href="../../skills/index.html">Skills</a><a href="../../contact/index.html">Contact</a></div><p class="footer-note">Aiman Nabeel · Portfolio · September 2026.</p></footer><dialog class="search-dialog" id="site-search" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="site-search-input">Search the complete portfolio</label><button type="button" data-search-close aria-label="Close search">Esc <span>×</span></button></div><input type="search" id="site-search-input" autocomplete="off" placeholder="Search projects, DITA Authoring Tool, education, writing examples…"><p id="search-count" class="search-count">Search story, projects, writing, and skills.</p><div id="search-results" class="search-results"></div></dialog></body></html>
