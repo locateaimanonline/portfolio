@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081522"><meta name="description" content="5. Technical writing and online help improvements"><title>5. Technical writing and online help improvements · Aiman Nabeel Peerji</title><link rel="stylesheet" href="../site-assets/styles.css?v=41256b4f7e"><script defer src="../site-assets/search-index.js?v=fc059b637b"></script><script defer src="../site-assets/site.js?v=17de298f8a"></script></head><body data-root="../"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Aiman Nabeel Peerji, home"><span class="brand-name">Aiman Nabeel Peerji</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../projects/index.html">Projects</a><a class="nav-story" href="../chapters/index.html" aria-current="page"><span>Story</span><small class="nav-story-786" aria-hidden="true">786</small></a><a href="../evidence/index.html">Writing</a><a href="../skills/index.html">Skills</a><a href="../contact/index.html">Contact</a></nav>
+      <div class="header-actions"><button class="search-trigger" type="button" data-search-open aria-label="Search the portfolio"><svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 5 5"></path></svg><span>Search</span><kbd>/</kbd></button><a class="resume-download" href="../assets/Aiman_Nabeel_Peerji_Recruiter_Resume.pdf" download="Aiman_Nabeel_Peerji_Recruiter_Resume.pdf" aria-label="Download Aiman Nabeel Peerji résumé as PDF"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"></path></svg><span>Download PDF</span></a><button class="menu-trigger" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><span></span><span></span></button></div>
+      <nav class="mobile-nav" aria-label="Mobile navigation" id="mobile-menu"><a href="../index.html">Home</a><a href="../projects/index.html">Projects</a><a class="nav-story" href="../chapters/index.html" aria-current="page"><span>Story</span><small class="nav-story-786" aria-hidden="true">786</small></a><a href="../evidence/index.html">Writing</a><a href="../skills/index.html">Skills</a><a href="../contact/index.html">Contact</a></nav>
+    </div></header><div class="progress-bar" id="reading-progress" aria-hidden="true"></div><main id="main" class="reader-shell"><div class="reader-head"><div class="container"><div class="eyebrow"><span class="eyebrow-line"></span>Story · chapter</div><p class="reader-kicker">Story chapter</p><h1>5. Technical writing and online help improvements</h1><p class="reader-head-links"><a href="../chapters/index.html">All chapters</a></p></div></div><div class="reader-layout reader-layout-three container"><aside class="reader-sidebar reader-chapters" aria-label="All chapters"><div class="sidebar-inner"><p>Story · chapters</p><nav><a class="" href="../chapters/01-professional-profile.html">1. Professional profile</a><a class="" href="../chapters/02-career-history-and-progression.html">2. Career history and progression</a><a class="" href="../chapters/03-technical-support-and-product-expertise.html">3. Technical support and product expertise</a><a class="" href="../chapters/04-projects-and-reusable-tools.html">4. Projects and reusable tools</a><a class="active" href="../chapters/05-technical-writing-and-online-help-improvements.html" aria-current="page">5. Technical writing and online help improvements</a><a class="" href="../chapters/06-ai-workflows-and-experimentation.html">6. AI workflows and experimentation</a><a class="" href="../chapters/07-documentation-engineering-and-automation.html">7. Documentation engineering and automation</a><a class="" href="../chapters/08-documentation-quality-and-validation.html">8. Documentation quality and validation</a><a class="" href="../chapters/09-workflows-and-documentation-operations.html">9. Workflows and documentation operations</a><a class="" href="../chapters/10-collaboration-and-team-contributions.html">10. Collaboration and team contributions</a><a class="" href="../chapters/11-education-and-academic-achievements.html">11. Education and academic achievements</a><a class="" href="../chapters/12-skills-and-tools.html">12. Skills and tools</a><a class="" href="../chapters/13-recognition-and-wider-background.html">13. Recognition and wider background</a></nav></div></aside><article class="prose" id="full-content"><h2 id="5-technical-writing-and-online-help-improvements">5. Technical writing and online help improvements</h2>
+<p>This chapter follows a single writing process from research and scoping through release work to improvements a reader can see in the help. The early examples establish what I investigated and what a topic needed to answer; the later comparison shows how guidance, structure, and coverage changed. Where the record shows a team-wide change rather than my individual commit, that attribution remains explicit.</p>
+<h3 id="5-1-establishing-the-documentation-scope">5.1 Establishing the documentation scope</h3>
+<p>My product-writing work involves determining what has changed, what users need to understand, and which existing topics should be updated. I use Jira and requirements to establish scope, inspect the relevant product or test environment, consult design material, and ask SMEs for details that are missing or uncertain. The resulting content must fit the existing help structure and review process. The next examples show how I investigated a documentation gap and shaped a proposed improvement; where a final topic is unavailable, I do not describe the research alone as a published change.</p>
+<p>The DOC-3063 example shows the value of that scoping work. In August 2024, I reviewed a new SOTI MobiControl interface with Bob Kong, identified the affected topics, and described a smaller set of targeted changes instead of the larger reorganization originally anticipated. For a reader unfamiliar with the product, this meant updating the instructions where the interface had changed instead of reorganizing unrelated help.</p>
+<h3 id="5-2-signal-properties-conditions-and-events">5.2 Signal properties conditions and events</h3>
+<p>While working on DOC-5028 and MC-234922, I requested complete inventories of Signal properties, supported device families, system components, configurations, and events. Signal helps administrators monitor device conditions and act on them; incomplete lists would leave readers unsure which inputs and events the feature actually supports. My documentation improvement was to seek the missing scope before writing or revising guidance.</p>
+<p>This research relates to the later help-improvement report's account of Signal content moving into a wizard-oriented structure with condition, action, schedule, property/event, example, upgrade, service, troubleshooting, and macro content. The broader restructuring is a team-wide comparison; my individual research and specific commits remain separately identified.</p>
+<h3 id="5-3-device-audit-logging">5.3 Device audit logging</h3>
+<p>For Device Audit Logging associated with MC-104549, I investigated design material and sought clarification on the location and composition of generated device logs. Readers need to know where diagnostic records appear and what each log contains; an inaccurate location would make a troubleshooting procedure unusable. When the available information was uncertain, I pursued another SME rather than relying on an unverified interpretation. The source identifies conversations with Yousef Said and Andrei Vesselkov in February 2026.</p>
+<p>This example connects support-style investigation with writing: I identified the questions the guidance needed to answer. The <a href="../evidence/before_after/G04.html">certificate-deployment before-and-after</a> shows a separate, directly inspectable example of turning technical detail into a guided procedure.</p>
+<h3 id="5-4-declarative-and-reactive-application-policies">5.4 Declarative and reactive application policies</h3>
+<p>I sought SME clarification on how declarative and reactive app policies differ, including update behaviour, managed application configuration, connectivity conditions, retry behaviour, and activation predicates. I then checked a draft with the SME. The writing analysis identifies a February 2026 conversation with Youssef Mohamed.</p>
+<p>These are distinctions that affect how an administrator interprets a policy, not simply alternative labels. In the master, the research belongs with the writing case study, while the help report's platform-specific App Policy structure belongs with the broader information-architecture comparison. The underlying conversations and draft should be attached before making a more detailed product-behaviour claim.</p>
+<h3 id="5-5-apple-enrollment-documentation">5.5 Apple enrollment documentation</h3>
+<p>My Apple enrollment review package reworked the overview, added a capability matrix, differentiated ADUE, ADDE, ADE, and related flows, and included a dedicated iOS ADDE topic. The cited review artifact is “links for review.docx.”</p>
+<p>The <a href="#5-14-apple-enrollment">reader-facing Apple help comparison</a> shows the broader reorganization, while the <a href="../evidence/before_after/G08.html">Apple enrollment before-and-after</a> isolates a specific committed overview change. These views answer different questions: how the section evolved, and what one selected revision actually changed.</p>
+<p>The improvements report describes a management-type structure with device-based, user-based, and account-driven enrollment, macOS and tvOS organization, Apple Business Manager terminology, and supporting policy-management tasks. It records publication with a caveat that the SME requested time for another pass. That is a historical publication observation in the June report, not confirmation that all later review work was completed.</p>
+<h3 id="5-6-feature-research-in-the-ai-work-history">5.6 Feature research in the AI work history</h3>
+<p>The work-history report records additional feature investigations and documentation requests. Examples include MC-306121 for Microsoft outbound email/Office 365 SMTP, MC-331878 for feature scope and designs, MC-326798 for Enterprise Apps moving from Policies/App Policies into Device Resources, DOC-5424 for a trunk update with review constraints, MC-260379 for Testing/trunk comparison, and MC-184954 for feature and device-support research. It also records DOC-5601 for a targeted 2026.1.2-and-later runtime note. These are descriptions of historical work, not current product requirements.</p>
+<p>The history associates DOC-5327 with eSIM-related research, while the improvements report's commit register also associates that key with Signal work. The ticket's actual scope should be checked before assigning a single project title. More broadly, the register includes initiated and exploratory threads, so a request to update content is not by itself evidence of a completed publication.</p>
+<h3 id="5-7-release-procedures-and-structured-delivery">5.7 Release procedures and structured delivery</h3>
+<p>The career report describes the Technical Writing process as a sequence of Jira intake, prioritization, research, drafting, SME and peer review, publication, communication, and closure. Inputs include source materials, QA test plans, SME interviews, and sprint demonstrations. Outputs include updated help, reviews, approvals, and resolved tickets where closure is recorded.</p>
+<p>I contributed an earlier version of the release-note procedure with Michael Pham. The described process uses a Jira request, a shared Word draft, Technical Writer review, manager peer review, and the subsequent publishing workflow. The procedure later evolved, so I retain my contribution without claiming authorship of every part of its current version.</p>
+<p>The following sections show the reader-facing result of that writing work, with the <a href="../evidence/index.html">Writing collection</a> providing exact before-and-after source pairs.</p>
+<h3 id="5-8-comparing-the-help-from-the-reader-perspective">5.8 Comparing the help from the reader perspective</h3>
+<p>SOTI MobiControl provides the case-study setting for this work. The transferable contribution is clearer procedures, better navigation, and more useful technical context. The audit separates my committed changes from the wider team's changes.</p>
+<p>The earlier <a href="#5-1-establishing-the-documentation-scope">research and release examples</a> explain how a writing task started. The <a href="../evidence/index.html">before-and-after collection</a> shows selected source revisions at the other end of that process. Together with the section-level comparison below, they make both the editorial reasoning and its visible result easier to follow.</p>
+<p>The improvements report I prepared compares the committed SOTI MobiControl help available before January 1, 2024 with the committed trunk state in June 2026. Its focus is what changed for readers: findability, task guidance, platform coverage, explanatory completeness, and layout. The baseline is commit 09e2cb9f42ce6797505414c318e8ba9d6315230d from December 20, 2023; the current comparison state is ca9d87f1a5b3c07ff2e0654bb200ac5445ec4322 from June 12, 2026. The review period ends June 24, 2026.</p>
+<p>The comparison excludes uncommitted edits. Mapped-topic counts come from ConsoleHelp.ditamap and exclude reltable entries. Device Details and Actions use a path-based scope because the work is spread across several topic areas. These definitions matter when interpreting the numbers. The report represents changes across multiple writers; the aggregate results are not solely my output.</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Baseline topics</th>
+<th>Current topics</th>
+<th>Command steps</th>
+<th>Media markup elements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profiles</td>
+<td>152</td>
+<td>270</td>
+<td>248 to 834</td>
+<td>91 to 665</td>
+</tr>
+<tr>
+<td>Global Settings</td>
+<td>76</td>
+<td>88</td>
+<td>57 to 139</td>
+<td>61 to 112</td>
+</tr>
+<tr>
+<td>Device Details and Actions</td>
+<td>17</td>
+<td>50</td>
+<td>67 to 211</td>
+<td>3 to 189</td>
+</tr>
+<tr>
+<td>Policies</td>
+<td>48</td>
+<td>94</td>
+<td>170 to 519</td>
+<td>31 to 440</td>
+</tr>
+<tr>
+<td>Apple Enrollment Policies mapped scope</td>
+<td>42</td>
+<td>51</td>
+<td>182 to 250</td>
+<td>31 to 85</td>
+</tr>
+<tr>
+<td>Certificates</td>
+<td>6</td>
+<td>13</td>
+<td>21 to 45</td>
+<td>1 to 23</td>
+</tr>
+</tbody>
+</table>
+<p>Source: H-T01, independently reproduced from the same Git revisions and counting method. The media total sums <code>&lt;fig&gt;</code>, <code>&lt;image&gt;</code> and <code>&lt;object&gt;</code> elements; a figure wrapper containing one image contributes two. It is not a count of unique screenshots. These are content-structure measurements, not measurements of reader success, support-call reduction, or time saved. See the .</p>
+<h3 id="5-9-profiles-and-the-sso-content-cluster">5.9 Profiles and the SSO content cluster</h3>
+<p>Profiles has the largest change footprint in the comparison. The current structure gives readers more ways to browse by operation, configuration category, platform, and payload/configuration area. Assignment options, access permissions, assignments, queue management, and stopping deployment sit closer to the main profile tasks. Platform coverage includes additional ChromeOS/macOS Wi-Fi, mobile private network, encrypted DNS, local users, Google Account, declarative profiles, and certificate-related content.</p>
+<p>The SSO example makes the navigation change concrete. A single mapped Single Sign-on entry became a cluster of 26 topics covering Android, Imprivata, Apple/macOS, Extensible SSO, Kerberos, and Microsoft Authenticator workflows. The detailed table records which topics are new in the mapped structure and which were repositioned from earlier sections. I retain every row in the comparison archive so the cluster is supported by named pages and links.</p>
+<p>Profiles remains an ongoing section-level effort in the report. Growth and reorganization should not be rewritten as a declaration that every profile topic is complete.</p>
+<h3 id="5-10-changes-verified-in-my-commits">5.10 Changes verified in my commits</h3>
+<p>The Git audit compares each selected commit with its own parent, isolating what that commit changed. These examples show the development of my writing and review practice. Command counts include substeps, and image counts refer to image elements in the file.</p>
+<table>
+<thead>
+<tr>
+<th>Example</th>
+<th>Verified change in the selected commit</th>
+<th>Commit and stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../evidence/before_after/G01.html">Kernel extensions</a></td>
+<td>Concept to task; 0 to 5 command elements; prerequisites and result added</td>
+<td>acaf4c4ef, 23 April 2025; peer review requested</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G03.html">Kerberos Extensible SSO</a></td>
+<td>Reference with 2 tables to task with 13 commands and 1 image</td>
+<td>0267f6468, 21 February 2025; historical revision with a Shared iPad wording issue</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G04.html">Certificates payload overview</a></td>
+<td>Concept to task with permission prerequisite, 3 commands and 1 image</td>
+<td>09d09a2e6, 26 May 2025; category-level workflow</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G05.html">Android Enterprise Wi-Fi</a></td>
+<td>4 tables and 0 commands to 1 table, 10 commands, 3 images and 1 video object</td>
+<td>0ceb48fe5, 30 July 2025; first draft</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G06.html">FileVault</a></td>
+<td>Reference with 1 table to task with 15 commands, recovery-key branches and 7 images</td>
+<td>f90f538ea, 11 March 2026; draft</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G07.html">API documentation portal</a></td>
+<td>2 to 8 commands; permissions, OAuth, request and response guidance; 9 images</td>
+<td>8945c23c9, 6 March 2026; draft</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G08.html">Apple enrollment overview</a></td>
+<td>Adds decision guidance for ownership, enrollment and management models</td>
+<td>95f301ba5, 11 May 2026; includes unresolved review comment</td>
+</tr>
+<tr>
+<td><a href="../evidence/before_after/G09.html">Profile deletion</a></td>
+<td>Adds bulk-operation choices, deletion scope, exception reasons and stale-selection feedback</td>
+<td>0a21c0142, 11 March 2026; committed change</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../evidence/index.html">rendered comparison collection</a> also includes my <a href="../evidence/before_after/G02.html">profile-assignment peer review</a> and a <a href="../evidence/before_after/G10.html">new Apple dynamic-configuration task</a> in Testing. The former preserves suggestions on a colleague's work; the latter is explicitly AI-labelled in its commit subject and has no before file. These demonstrate editorial judgement and AI-assisted authoring without implying accepted final text or production publication.</p>
+<p>The comparison also covered Samsung application-firewall and manually uploaded-certificate examples. Its June endpoint counts are different from a single earlier draft commit. For example, FileVault has 14 commands and 5 image elements at the June endpoint, compared with 15 and 7 in the selected March draft. The certificate-payload overview later became the 11-command manually uploaded-certificate task at the same file path; those later counts must not be attributed to the May conversion alone.</p>
+<p>The audit also traced all ten paths into later revisions. Michael Pham's immediate follow-up incorporates several of my profile-assignment review suggestions, including the direct opening, separate navigation step, consolidated filter guidance and related link. My May 2026 post-review revisions improve the Wi-Fi, FileVault and API examples; FileVault's application/profile wording is corrected. The  records exact revisions, attribution and remaining issues, and the gallery includes four later-source views. Review activity does not by itself prove publication.</p>
+<p>The audit resolved several misleading conversion labels. Three Windows Mobile pages and Android hotspot changed to task roots on 30 July 2025 and returned to reference roots in the next day's transformation-fix commit. They are excluded from lasting-conversion claims. Other rows combine historic detection with a different endpoint form; the row-by-row validation table records the actual roots and counts.</p>
+<h3 id="5-11-global-settings">5.11 Global Settings</h3>
+<p>Global Settings changed mainly through grouping, terminology, and connections to nearby workflows. The report describes a flatter reference catalogue becoming easier to browse by console settings area, including Device Agent and Plugin, Enterprise Migration Certificate, App Store License Management, APNS, Automated Device Enrollment, API clients, Device Maintenance, Terms and Conditions, LDAP, and Google Workspace bindings.</p>
+<p>Outbound email is an example of placing related help near a task. Notification content appears under Monitoring while Global Settings references support viewing connections and sending test email. The detailed records also include Microsoft Entra application and SMTP outbound connections, Apple root certificates, Chrome Enterprise bindings, Cloud Link, deployment-server settings, and other additions. The comparison archive retains all 42 topic-level rows.</p>
+<h3 id="5-12-device-details-actions-and-updates">5.12 Device details actions and updates</h3>
+<p>The Device Details and Actions area grew through targeted additions rather than a single root-node rebuild. The comparison includes device-action behaviour, details and search, update workflows, eSIM policy management, Windows OS images, the Updates dashboard, and rollback handling. Within the defined path-based scope, task topics increased from fourteen to thirty-two.</p>
+<p>These help improvements connect to actual administrator tasks. The commit archive identifies my updates-dashboard and rollback contributions, including an April 2026 entry for DOC-4980.</p>
+<h3 id="5-13-policies">5.13 Policies</h3>
+<p>App Policy content expanded from twenty-six mapped topics to fifty-four and was grouped by Android, Apple, Windows, Enterprise App Store, and management operations. Signal grew from eight mapped topics to twenty-two, with wizard steps and nearby property, event, example, upgrade, service, troubleshooting, and macro references. Compliance and Enrollment Policy sections gained permission and label-management support.</p>
+<p>The comparison archive retains the forty-eight App/Signal detail rows and the commit records behind the broader work. My recorded contributions include declarative/reactive app management, Signal material, peer-review revisions, and policy-related updates. The content tree and the commit evidence are complementary: one describes the reader's route, and the other records who touched particular source files.</p>
+<h3 id="5-14-apple-enrollment">5.14 Apple enrollment</h3>
+<p>Apple enrollment received a larger revamp around management types and enrollment choices. The source describes a capability matrix, device-based and user-based flows, account-driven enrollment, macOS and tvOS organization, Apple Business Manager, Managed Apple Accounts, supervised enrollment with Apple Configurator, discovery-service support, and policy permissions and labels.</p>
+<p>The report also uses a broader folder scan for Apple/enrollment-adjacent topics: ninety-four to 102 topics, 359 to 377 command steps, and fifty-one to 150 media markup elements. That scan has a different denominator from the mapped-policy numbers in the summary table and must remain separately labelled.</p>
+<h3 id="5-15-certificates">5.15 Certificates</h3>
+<p>Certificate help became more lifecycle-oriented in the comparison. It brings together manually uploaded certificates, dynamic deployment, certificate-authority integration, templates, Subject Alternative Names, dashboard visibility, and device-level management. The mapped scope increased from six topics to thirteen.</p>
+<p>The certificate commit records include my work on DOC-3852, DOC-3856, and DOC-4854, with drafting, review requests, and incorporation of feedback recorded in the source. Other writers contributed to the same section, including dashboard and template changes. The master preserves those author distinctions.</p>
+<h3 id="5-16-consolidation-and-the-limits-of-the-comparison">5.16 Consolidation and the limits of the comparison</h3>
+<p>The removals table is limited to cases where the current structure supplies a clear consolidation or replacement explanation. It does not turn deleted paths into current deliverables. The comparison did not apply an NPI-only filter, and it treats appropriate reference topics as legitimate parts of the help.</p>
+<p>The report says its generated current and 2024.0 URLs were checked with GET requests on June 24, 2026. That historical check is retained with its date; it is not a guarantee that every link remains available today. The archive preserves the full topic records, seven supplied visuals, and 140 section/commit rows. Repeated commits across sections are not counted as unique projects or unique outputs.</p>
+</article><aside class="reader-sidebar reader-on-page" aria-label="In this chapter"><div class="sidebar-inner"><p>In this chapter</p><nav><a href="#5-1-establishing-the-documentation-scope">5.1 Establishing the documentation scope</a><a href="#5-2-signal-properties-conditions-and-events">5.2 Signal properties conditions and events</a><a href="#5-3-device-audit-logging">5.3 Device audit logging</a><a href="#5-4-declarative-and-reactive-application-policies">5.4 Declarative and reactive application policies</a><a href="#5-5-apple-enrollment-documentation">5.5 Apple enrollment documentation</a><a href="#5-6-feature-research-in-the-ai-work-history">5.6 Feature research in the AI work history</a><a href="#5-7-release-procedures-and-structured-delivery">5.7 Release procedures and structured delivery</a><a href="#5-8-comparing-the-help-from-the-reader-perspective">5.8 Comparing the help from the reader perspective</a><a href="#5-9-profiles-and-the-sso-content-cluster">5.9 Profiles and the SSO content cluster</a><a href="#5-10-changes-verified-in-my-commits">5.10 Changes verified in my commits</a><a href="#5-11-global-settings">5.11 Global Settings</a><a href="#5-12-device-details-actions-and-updates">5.12 Device details actions and updates</a><a href="#5-13-policies">5.13 Policies</a><a href="#5-14-apple-enrollment">5.14 Apple enrollment</a><a href="#5-15-certificates">5.15 Certificates</a><a href="#5-16-consolidation-and-the-limits-of-the-comparison">5.16 Consolidation and the limits of the comparison</a></nav></div></aside></div><nav class="reader-pager container" aria-label="Adjacent sections"><a href="../chapters/04-projects-and-reusable-tools.html"><small>← Previous</small>4. Projects and reusable tools</a><a href="../chapters/06-ai-workflows-and-experimentation.html"><small>Next →</small>6. AI workflows and experimentation</a></nav></main><footer class="site-footer"><div><a class="footer-brand" href="../index.html">Aiman Nabeel Peerji<span>.</span></a><p>AI-first technical writing grounded in product evidence, useful guidance, and shared practice.</p></div><div class="footer-links"><a href="../projects/index.html">Projects</a><a href="../chapters/index.html">Story</a><a href="../evidence/index.html">Writing</a><a href="../skills/index.html">Skills</a><a href="../contact/index.html">Contact</a></div><p class="footer-note">Aiman Nabeel Peerji · Portfolio · September 2026.</p></footer><dialog class="search-dialog" id="site-search" aria-labelledby="search-title"><div class="search-top"><label id="search-title" for="site-search-input">Search the complete portfolio</label><button type="button" data-search-close aria-label="Close search">Esc <span>×</span></button></div><input type="search" id="site-search-input" autocomplete="off" placeholder="Search projects, DITA Authoring Tool, education, writing examples…"><p id="search-count" class="search-count">Search story, projects, writing, and skills.</p><div id="search-results" class="search-results"></div></dialog></body></html>

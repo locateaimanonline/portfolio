@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Issue Workflow"
+  short_description: "Search and manage issues in your Jira site."
+  default_prompt: "Use $jira-issue-workflow to find and summarize the Jira issues I specify."

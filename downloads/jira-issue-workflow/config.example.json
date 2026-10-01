@@ -1,0 +1,10 @@
+{
+  "site": "https://jira.example.com",
+  "authScheme": "Bearer",
+  "email": "writer@example.com",
+  "apiVersion": "2",
+  "defaults": {
+    "project": "EXAMPLE",
+    "issueType": "Task"
+  }
+}
